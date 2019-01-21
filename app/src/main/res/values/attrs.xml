@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 自定义验证码输入框-->
+    <declare-styleable name="vericationCodeView">
+        <!--输入框的数量-->
+        <attr name="vcv_et_number" format="integer" />
+        <!--输入类型-->
+        <attr name="vcv_et_inputType">
+            <enum name="number" value="0" />
+            <enum name="numberPassword" value="1" />
+            <enum name="text" value="2" />
+            <enum name="textPassword" value="3" />
+        </attr>
+        <!--输入框的宽度-->
+        <attr name="vcv_et_width" format="dimension|reference" />
+        <!--输入框文字颜色-->
+        <attr name="vcv_et_text_color" format="color|reference" />
+        <!--输入框文字大小-->
+        <attr name="vcv_et_text_size" format="dimension|reference" />
+        <!--输入框背景-->
+        <attr name="vcv_et_bg" format="reference" />
+        <!--光标样式-->
+        <attr name="vcv_et_cursor" format="reference" />
+    </declare-styleable>
+
+
+    <declare-styleable name="FlyBanner">
+        <attr name="points_visibility" format="boolean"/>
+        <attr name="points_mAutoPlayAble" format="boolean"/>
+        <attr name="points_position" format="enum">
+            <enum name="CENTER" value="0"/>
+            <enum name="LEFT" value="1"/>
+            <enum name="RIGHT" value="2"/>
+        </attr>
+        <attr name="points_container_background" format="reference|color"/>
+    </declare-styleable>
+
+
+    <!--自定义CommonView-->
+    <declare-styleable name="CommonView">
+        <attr name="desTextColor" format="color" />
+        <attr name="categoryImage" format="reference" />
+        <attr name="desText" format="string" />
+        <attr name="isShowCategoryImage" format="boolean" />
+        <attr name="statusImage" format="reference" />
+        <attr name="statusImage_width" format="dimension" />
+        <attr name="statusImage_height" format="dimension" />
+        <attr name="desTextSize" format="dimension" />
+
+        <attr name="isShowTextNotes" format="boolean" />
+        <attr name="isSingleTextNotes" format="boolean" />
+        <attr name="notesText" format="string" />
+        <attr name="notesTextColor" format="color" />
+        <attr name="notesTextSize" format="dimension" />
+
+        <attr name="isShowTextCent" format="boolean" />
+        <attr name="isSingleTextCent" format="boolean" />
+        <attr name="centText" format="string" />
+        <attr name="centTextColor" format="color" />
+        <attr name="centTextSize" format="dimension" />
+
+        <attr name="isShowArraw" format="boolean" />
+
+    </declare-styleable>
+
+
+    <!-- 截取图片 -->
+    <declare-styleable name="ClipImageLayout">
+        <attr name="clip_image" format="reference"></attr>
+        <attr name="clip_hor" format="integer"></attr>
+    </declare-styleable>
+
+</resources>

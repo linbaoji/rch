@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <LinearLayout
+            android:paddingBottom="30dp"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/white_bg_radiu"
+            android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/iv_rz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/tj_icon"
+                    android:layout_marginTop="20dp" />
+
+                <TextView
+                    android:id="@+id/content_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="认证成功"
+                    android:textSize="18sp"
+                    android:textColor="@color/black_1"
+                    android:layout_marginTop="20dp" />
+
+                <TextView
+                    android:id="@+id/tv_decc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="恭喜您，已认证成功"
+                    android:textColor="@color/gray_3"
+                    android:layout_marginTop="15dp" />
+
+                <!--继续逛逛-->
+                <TextView
+                    android:id="@+id/tv_serach_car"
+                    android:layout_width="100dp"
+                    android:layout_height="26dp"
+                    android:text="去选车"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/button"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:layout_marginTop="24dp" />
+
+                <TextView
+                    android:id="@+id/tv_zbrz"
+                    android:layout_width="100dp"
+                    android:layout_height="26dp"
+                    android:text="暂不认证"
+                    android:textColor="@color/orange_2"
+                    android:background="@drawable/publish_type"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:layout_marginTop="15dp" />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/delete"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp" />
+</LinearLayout>

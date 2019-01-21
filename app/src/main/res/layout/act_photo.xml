@@ -1,0 +1,1379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentInsetStart="0dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleMarginStart="0dp"
+        >
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="上传图片"
+            android:textColor="@color/black_1"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ebebeb"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1. 最多可以上传14张图片，您已上传0张；"
+                    android:textColor="@color/tv_12"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="2. 建议上传900px×600px的图片，大小不超过8M"
+                    android:textColor="@color/tv_12"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!--下面图片-->
+
+            <LinearLayout
+                style="@style/ll_addphoto">
+
+                <LinearLayout
+                    style="@style/ll_additem">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70.5dp">
+
+
+                        <ImageView
+                            android:id="@+id/iv_fm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/fbfm" />
+
+
+                        <ImageView
+                            android:visibility="gone"
+                            android:id="@+id/iv_fm_deleat"
+                            style="@style/iv_deleat"
+                           />
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            style="@style/ll_jd"
+                            android:id="@+id/ll_fmpr"
+                           >
+
+                            <ProgressBar
+                                android:id="@+id/pb_fm"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="50dp"
+                                android:layout_height="5dp"
+                                android:max="100"
+                                android:progress="0"
+                                android:progressDrawable="@drawable/progressbar"
+                                android:secondaryProgress="0" />
+
+                            <TextView
+                                android:textColor="@color/white"
+                                android:id="@+id/tv_fmjd"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="已上传0%"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:src="@mipmap/fbfmlog"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_fm"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/iv_fm"
+                            android:text="左前侧45度" />
+
+                        <TextView
+                            style="@style/tv_red_xin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="107dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/gray_brown"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70.5dp">
+
+
+                        <ImageView
+                            android:id="@+id/iv_zc"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/fbzc" />
+
+                        <ImageView
+                            android:id="@+id/iv_zcdet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:src="@mipmap/red_delet"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_zcpro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <ProgressBar
+                                android:id="@+id/pb_zc"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="50dp"
+                                android:layout_height="5dp"
+                                android:max="100"
+                                android:progress="50"
+                                android:progressDrawable="@drawable/progressbar"
+                                android:secondaryProgress="0" />
+
+                            <TextView
+                                android:id="@+id/tv_zcjd"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="已上传40%"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_fm"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/iv_fm"
+                            android:text="左侧" />
+
+                        <TextView
+                            style="@style/tv_red_xin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="107dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/gray_brown"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70.5dp">
+
+
+                        <ImageView
+                            android:id="@+id/iv_zhc"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/fbzhc" />
+
+                        <ImageView
+                            android:id="@+id/iv_zhcdet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:src="@mipmap/red_delet"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_zhcpro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <ProgressBar
+                                android:id="@+id/pb_zhc"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="50dp"
+                                android:layout_height="5dp"
+                                android:max="100"
+                                android:progress="50"
+                                android:progressDrawable="@drawable/progressbar"
+                                android:secondaryProgress="0" />
+
+                            <TextView
+                                android:id="@+id/tv_zhcjd"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="已上传40%"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_fm"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/iv_fm"
+                            android:text="左后侧45度" />
+
+                        <TextView
+                            style="@style/tv_red_xin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingTop="30dp">
+
+                <LinearLayout
+                    android:layout_width="107dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/gray_brown"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70.5dp">
+
+
+                        <ImageView
+                            android:id="@+id/iv_jsczy"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/fbjsczy" />
+
+                        <ImageView
+                            android:id="@+id/iv_jsczydet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:src="@mipmap/red_delet"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_jsczypro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <ProgressBar
+                                android:id="@+id/pb_jsczy"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="50dp"
+                                android:layout_height="5dp"
+                                android:max="100"
+                                android:progress="50"
+                                android:progressDrawable="@drawable/progressbar"
+                                android:secondaryProgress="0" />
+
+                            <TextView
+                                android:id="@+id/tv_jsczyjd"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="已上传40%"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_fm"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/iv_fm"
+                            android:text="驾驶舱座椅" />
+
+                        <TextView
+                            style="@style/tv_red_xin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="107dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/gray_brown"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70.5dp">
+
+                        <ImageView
+                            android:id="@+id/iv_ybp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/fbybp" />
+
+                        <ImageView
+                            android:id="@+id/iv_ybpdet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:src="@mipmap/red_delet"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_ybppro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <ProgressBar
+                                android:id="@+id/pb_ybp"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="50dp"
+                                android:layout_height="5dp"
+                                android:max="100"
+                                android:progress="50"
+                                android:progressDrawable="@drawable/progressbar"
+                                android:secondaryProgress="0" />
+
+                            <TextView
+                                android:id="@+id/tv_ybpjd"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="已上传40%"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_fm"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/iv_fm"
+                            android:text="仪表盘" />
+
+                        <TextView
+                            style="@style/tv_red_xin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="107dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/gray_brown"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70.5dp">
+
+
+                        <ImageView
+                            android:id="@+id/iv_fdjc"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/fdjc" />
+
+                        <ImageView
+                            android:id="@+id/iv_fdcjdet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:src="@mipmap/red_delet"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_fdjcpro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <ProgressBar
+                                android:id="@+id/pb_fdjc"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="50dp"
+                                android:layout_height="5dp"
+                                android:max="100"
+                                android:progress="50"
+                                android:progressDrawable="@drawable/progressbar"
+                                android:secondaryProgress="0" />
+
+                            <TextView
+                                android:id="@+id/tv_fdjcjd"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="已上传40%"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_fm"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/iv_fm"
+                            android:text="发动机舱" />
+
+                        <TextView
+                            style="@style/tv_red_xin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingTop="30dp">
+
+                <LinearLayout
+                    android:layout_width="107dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/gray_brown"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70.5dp">
+
+
+                        <ImageView
+                            android:id="@+id/iv_ct"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/fbct" />
+
+                        <ImageView
+                            android:id="@+id/iv_ctdet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:src="@mipmap/red_delet"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_ctpro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <ProgressBar
+                                android:id="@+id/pb_ct"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="50dp"
+                                android:layout_height="5dp"
+                                android:max="100"
+                                android:progress="50"
+                                android:progressDrawable="@drawable/progressbar"
+                                android:secondaryProgress="0" />
+
+                            <TextView
+                                android:id="@+id/tv_ctjd"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="已上传40%"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_fm"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/iv_fm"
+                            android:text="车头" />
+
+                        <TextView
+                            style="@style/tv_red_xin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="107dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/gray_brown"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70.5dp">
+
+
+                        <ImageView
+                            android:id="@+id/iv_cw"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/fbcw" />
+
+                        <ImageView
+                            android:id="@+id/iv_cwdet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:src="@mipmap/red_delet"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_cwpro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <ProgressBar
+                                android:id="@+id/pb_cw"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="50dp"
+                                android:layout_height="5dp"
+                                android:max="100"
+                                android:progress="50"
+                                android:progressDrawable="@drawable/progressbar"
+                                android:secondaryProgress="0" />
+
+                            <TextView
+                                android:id="@+id/tv_cwjd"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="已上传40%"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_fm"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/iv_fm"
+                            android:text="车尾" />
+
+                        <TextView
+                            style="@style/tv_red_xin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="107dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/gray_brown"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70.5dp">
+
+
+                        <ImageView
+                            android:id="@+id/iv_yc"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/fbyc" />
+
+                        <ImageView
+                            android:id="@+id/iv_ycdet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:src="@mipmap/red_delet"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_ycpro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <ProgressBar
+                                android:id="@+id/pb_yc"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="50dp"
+                                android:layout_height="5dp"
+                                android:max="100"
+                                android:progress="50"
+                                android:progressDrawable="@drawable/progressbar"
+                                android:secondaryProgress="0" />
+
+                            <TextView
+                                android:id="@+id/tv_ycjd"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="已上传40%"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_fm"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/iv_fm"
+                            android:text="右侧" />
+
+                        <TextView
+                            style="@style/tv_red_xin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingTop="30dp">
+
+                <LinearLayout
+                    android:layout_width="107dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/gray_brown"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70.5dp">
+
+
+                        <ImageView
+                            android:id="@+id/iv_yhc"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/fbyhc" />
+
+                        <ImageView
+                            android:id="@+id/iv_yhcdet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:src="@mipmap/red_delet"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_yhcpro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <ProgressBar
+                                android:id="@+id/pb_yhc"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="50dp"
+                                android:layout_height="5dp"
+                                android:max="100"
+                                android:progress="50"
+                                android:progressDrawable="@drawable/progressbar"
+                                android:secondaryProgress="0" />
+
+                            <TextView
+                                android:id="@+id/tv_yhcjd"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="已上传40%"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_fm"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/iv_fm"
+                            android:text="右后侧45度" />
+
+                        <TextView
+                            style="@style/tv_red_xin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="107dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/gray_brown"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70.5dp">
+
+
+                        <ImageView
+                            android:id="@+id/iv_yqc"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/fbyqc" />
+
+                        <ImageView
+                            android:id="@+id/iv_yqcdet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:src="@mipmap/red_delet"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_yqcpro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <ProgressBar
+                                android:id="@+id/pb_yqc"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="50dp"
+                                android:layout_height="5dp"
+                                android:max="100"
+                                android:progress="50"
+                                android:progressDrawable="@drawable/progressbar"
+                                android:secondaryProgress="0" />
+
+                            <TextView
+                                android:id="@+id/tv_yqcjd"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="已上传40%"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_fm"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/iv_fm"
+                            android:text="右前侧45度" />
+
+                        <TextView
+                            style="@style/tv_red_xin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="107dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/gray_brown"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70.5dp">
+
+
+                        <ImageView
+                            android:id="@+id/iv_ryrt"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/fbryrt" />
+
+                        <ImageView
+                            android:id="@+id/iv_ryrtdet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:src="@mipmap/red_delet"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_ryrtpro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <ProgressBar
+                                android:id="@+id/pb_ryrt"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="50dp"
+                                android:layout_height="5dp"
+                                android:max="100"
+                                android:progress="50"
+                                android:progressDrawable="@drawable/progressbar"
+                                android:secondaryProgress="0" />
+
+                            <TextView
+                                android:id="@+id/tv_ryrtjd"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="已上传40%"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_fm"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/iv_fm"
+                            android:text="轮毂轮胎" />
+
+                        <TextView
+                            style="@style/tv_red_xin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingTop="30dp">
+
+                <LinearLayout
+                    android:layout_width="107dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/gray_brown"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70.5dp">
+
+
+                        <ImageView
+                            android:id="@+id/iv_hpzy"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/fbhpzy" />
+
+                        <ImageView
+                            android:id="@+id/iv_hpzydet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:src="@mipmap/red_delet"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_hpzypro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <ProgressBar
+                                android:id="@+id/pb_hpzy"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="50dp"
+                                android:layout_height="5dp"
+                                android:max="100"
+                                android:progress="50"
+                                android:progressDrawable="@drawable/progressbar"
+                                android:secondaryProgress="0" />
+
+                            <TextView
+                                android:id="@+id/tv_hpzyjd"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="已上传40%"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_fm"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/iv_fm"
+                            android:text="后排座椅" />
+
+                        <TextView
+                            style="@style/tv_red_xin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="107dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/gray_brown"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70.5dp">
+
+
+                        <ImageView
+                            android:id="@+id/iv_hbx"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/fbhbx" />
+
+                        <ImageView
+                            android:id="@+id/iv_hbxdet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:src="@mipmap/red_delet"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_hbxpro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <ProgressBar
+                                android:id="@+id/pb_hbx"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="50dp"
+                                android:layout_height="5dp"
+                                android:max="100"
+                                android:progress="50"
+                                android:progressDrawable="@drawable/progressbar"
+                                android:secondaryProgress="0" />
+
+                            <TextView
+                                android:id="@+id/tv_hbxjd"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="已上传40%"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_fm"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/iv_fm"
+                            android:text="后背箱" />
+
+                        <TextView
+                            style="@style/tv_red_xin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="107dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/gray_brown"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="invisible">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70.5dp">
+
+
+                        <ImageView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/photofm" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:src="@mipmap/red_delet"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <ProgressBar
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="50dp"
+                                android:layout_height="5dp"
+
+                                android:max="100"
+                                android:progress="50"
+                                android:progressDrawable="@drawable/progressbar"
+                                android:secondaryProgress="0" />
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="已上传40%"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_fm"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/iv_fm"
+                            android:text="轮毂轮胎" />
+
+                        <TextView
+                            style="@style/tv_red_xin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

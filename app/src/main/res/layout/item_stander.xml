@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:background="@color/white"
+        android:id="@+id/ll_bag"
+        android:gravity="center_vertical"
+        android:paddingRight="15dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/tv_stander"
+            android:layout_width="0dp"
+            android:layout_height="43dp"
+            android:text="中规"
+            android:textSize="14sp"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:textColor="@color/orange_2"/>
+
+        <ImageView
+            android:id="@+id/iv_check"
+            android:src="@mipmap/city_checked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <View
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:background="@color/gray" />
+
+    </LinearLayout>
+

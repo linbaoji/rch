@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentInsetStart="0dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleMarginStart="0dp"
+        >
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        >
+        <ImageView
+            android:paddingRight="15dp"
+            android:id="@+id/pre_order_success_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:src="@mipmap/back"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="预约成功"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black_1"/>
+
+    </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <RelativeLayout
+        android:layout_below="@+id/rl_top"
+        android:id="@+id/rl_order_success"
+        android:background="@mipmap/success"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_marginBottom="55dp"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/btn_continue"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:textColor="@color/white"
+                android:text="继续逛逛"/>
+            <Button
+                android:id="@+id/btn_look_order"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gray_button"
+                android:textColor="@color/orange_1"
+                android:text="查看预约"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/pre_order_success"/>
+
+
+        <TextView
+            android:gravity="center"
+            android:paddingRight="30dp"
+            android:paddingLeft="30dp"
+            android:id="@+id/pre_order_success_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="您今日已预约成功，客服将跟您联系,"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_marginTop="55dp"
+            android:layout_alignParentTop="true"
+           />
+
+        <TextView
+            android:id="@+id/tv_jt"
+            android:gravity="center"
+            android:layout_below="@id/pre_order_success_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="请留意接听哦"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            />
+
+
+        <!--android:text="恭喜您，已经预约成功！"-->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="245dp"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:background="@drawable/shadow_bg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/linearLayout">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="请按以下提示准备资料，并等待工作人员跟你电话联系"
+                android:textColor="@color/black_1"
+                android:textSize="12sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="必备："
+                android:textColor="@color/black_1"
+                android:textSize="12sp"
+                />
+
+
+            <!--android:text="@string/pro_order_desc"-->
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*本人身份证"
+                android:textColor="@color/black_1"
+                android:textSize="12sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*本人驾驶证"
+                android:textColor="@color/black_1"
+                android:textSize="12sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*常用银行卡"
+                android:textColor="@color/black_1"
+                android:textSize="12sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:text="*征信报告（如购买车辆指导价高于等于10万，需提供）"
+                android:textColor="@color/black_1"
+                android:textSize="12sp"
+                />
+            <!--android:text="@string/pro_order_desc_1"-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="额外提供："
+                android:layout_marginTop="18dp"
+                android:textColor="@color/black_1"
+                android:textSize="12sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*财产证明（如：房产证、银行流水、社保/公积金缴纳证明等）将有助于您分期更高价位车型"
+                android:textColor="@color/black_1"
+                android:textSize="12sp"
+                />
+
+            <!--android:text="@string/pro_order_desc_2"-->
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

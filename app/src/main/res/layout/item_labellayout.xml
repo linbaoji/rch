@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_iscom"
+            android:visibility="gone"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/buttto_iscom"
+            android:textColor="@color/red_11"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:text="推荐"
+            android:layout_width="30dp"
+            android:layout_height="13dp" />
+
+        <TextView
+            android:id="@+id/tv_isstart"
+            android:visibility="gone"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/buttto_istart"
+            android:textColor="@color/yelleo_11"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:text="明星"
+            android:layout_width="30dp"
+            android:layout_height="13dp" />
+
+        <TextView
+            android:id="@+id/tv_isselect"
+            android:visibility="gone"
+            android:background="@drawable/buttto_isselect"
+            android:textColor="@color/bule_11"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:text="精选"
+            android:layout_width="30dp"
+            android:layout_height="13dp" />
+
+
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

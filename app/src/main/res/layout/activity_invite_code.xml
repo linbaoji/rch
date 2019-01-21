@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/transparent"
+        >
+        <ImageView
+            android:id="@+id/invite_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:src="@mipmap/white_back"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="邀请码"
+            android:textColor="@color/black_1"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:src="@mipmap/invite_icon"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="500dp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/yq_bg"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已成功邀请"
+            android:textSize="13sp"
+            android:textColor="@android:color/white"
+            android:layout_toLeftOf="@+id/invite_count"
+            android:layout_alignBottom="@+id/invite_count"
+            android:visibility="gone"
+            android:layout_marginBottom="2dp"
+            />
+
+        <TextView
+            android:id="@+id/invite_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:visibility="gone"
+            android:layout_marginBottom="215dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="位分销商加入"
+            android:textSize="13sp"
+            android:textColor="@android:color/white"
+            android:layout_toRightOf="@+id/invite_count"
+            android:layout_alignBottom="@+id/invite_count"
+            android:visibility="gone"
+            android:layout_marginBottom="2dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的邀请码"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:textSize="18sp"
+            android:textColor="@color/orange_5"
+            android:layout_marginBottom="160dp"
+            />
+
+
+        <TextView
+            android:id="@+id/invite_code"
+            android:layout_width="240dp"
+            android:layout_height="40dp"
+            android:text=""
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:textColor="@color/orange_5"
+            android:gravity="center"
+            android:background="@drawable/invite_code_btn"
+            android:layout_marginBottom="100dp"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize">
+
+        <ImageView
+            android:id="@+id/act_order_info_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="预约详情"
+            android:textColor="@color/black_1"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/iv_more"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@mipmap/more" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingBottom="24dp"
+                    android:paddingTop="34dp">
+
+                    <ImageView
+                        android:id="@+id/act_order_info_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/use_person" />
+
+                    <TextView
+                        android:id="@+id/act_order_info_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text=""
+                        android:textColor="#413f3b"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/act_order_info_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text=""
+                        android:textColor="#989898"
+                        android:textSize="12sp" />
+
+
+                </LinearLayout>
+
+                <View
+                    style="@style/view_line"
+                    android:layout_height="10dp"></View>
+
+                <com.rch.custom.CommonView
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    app:desText="客户预约车辆"
+                    app:desTextColor="@color/black_1"
+                    app:desTextSize="14sp"
+                    app:isShowArraw="false"
+                    app:isShowCategoryImage="false"></com.rch.custom.CommonView>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray"/>
+                <LinearLayout
+                    android:padding="15dp"
+                    android:id="@+id/shop_list_adapter_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    >
+
+                    <ImageView
+                        android:src="@mipmap/banner"
+                        android:scaleType="fitXY"
+                        android:id="@+id/act_order_info_icon"
+                        android:layout_width="120dp"
+                        android:layout_height="80dp"
+                        />
+
+                    <RelativeLayout
+                        android:layout_marginLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1.0">
+
+                        <TextView
+                            android:text=""
+                            android:id="@+id/act_order_info_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black_1"
+                            android:lines="2"
+                            android:ellipsize="end"
+                            android:textSize="14sp"
+                            />
+
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:text=""
+                            android:id="@+id/act_order_info_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gray_4"
+                            android:textSize="12sp"
+                            android:visibility="gone"
+                            />
+
+
+                        <LinearLayout
+                            android:layout_alignParentBottom="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+                            <LinearLayout
+                                android:id="@+id/act_order_info_one_layout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                >
+                                <TextView
+                                    android:id="@+id/act_order_info_one"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="门店价:"
+                                    android:textSize="11sp"
+                                    android:textColor="@color/gray_4"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/act_order_info_one_money"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="11sp"
+                                    android:textColor="@color/orange_2"
+                                    android:layout_marginLeft="2dp"
+                                    />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/act_order_info_two_layout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                >
+                                <TextView
+                                    android:id="@+id/act_order_info_two"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="企业价:"
+                                    android:textSize="11sp"
+                                    android:textColor="@color/gray_4"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/act_order_info_two_money"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="11sp"
+                                    android:textColor="@color/orange_2"
+                                    android:layout_marginLeft="2dp"
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <View
+                    style="@style/view_line"
+                    android:layout_height="10dp"></View>
+
+                <com.rch.custom.CommonView
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    app:desText="订单状态"
+                    app:desTextColor="@color/black_1"
+                    app:desTextSize="14sp"
+                    app:isShowArraw="false"
+                    app:isShowCategoryImage="false"></com.rch.custom.CommonView>
+
+                <View style="@style/view_line"></View>
+
+                <com.rch.custom.OrderStatusInfo
+                    android:paddingTop="15dp"
+                    android:paddingLeft="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/act_order_info_order_status"
+                    android:orientation="vertical"/>
+
+
+           <!--     <LinearLayout
+                    android:paddingBottom="77dp"
+                    android:paddingTop="30dp"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    &lt;!&ndash;客户预约成功&ndash;&gt;
+                    <LinearLayout
+                        android:id="@+id/act_order_info_status_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="16dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/ld" />
+
+                            <View
+                                android:id="@+id/act_order_info_status_one_line"
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="#54d78e"></View>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:orientation="vertical"
+                            android:paddingBottom="30dp">
+
+                            <TextView
+                                android:id="@+id/act_order_info_status_one_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="客户预约成功"
+                                android:textColor="@color/black_1"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/act_order_info_status_one_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="客户姓名：张三"
+                                android:textColor="@color/gray_13"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/act_order_info_status_one_home"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="手机号：188 **** 8888"
+                                android:textColor="@color/gray_13"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/act_order_info_status_one_desc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:ellipsize="end"
+                                android:lines="1"
+                                android:text="预约车辆：别克 英朗两厢 2013款 1.6 自动 XT舒适型"
+                                android:textColor="@color/gray_13"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/act_order_info_status_one_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="看车日期：2018年06月30日"
+                                android:textColor="@color/gray_13"
+                                android:textSize="12sp" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    &lt;!&ndash;带客户到店看车&ndash;&gt;
+                    <LinearLayout
+                        android:id="@+id/act_order_info_status_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="16dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/ld" />
+
+                            <View
+                                android:id="@+id/act_order_info_status_two_line"
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="#54d78e"></View>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:orientation="vertical"
+                            android:paddingBottom="30dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="带客户到店看车"
+                                android:textColor="@color/black_1"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="实际看车日期：2018年06月30日"
+                                android:textColor="@color/gray_13"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="看车结果：这个客户有看车意向，但买车的欲望不够强烈"
+                                android:textColor="@color/gray_13"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    &lt;!&ndash;门店确认看车意向&ndash;&gt;
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="16dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/ld" />
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="#54d78e"></View>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:orientation="vertical"
+                            android:paddingBottom="30dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="门店确认看车意向"
+                                android:textColor="@color/black_1"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="门店确认时间：2018年06月30日 14:20"
+                                android:textColor="@color/gray_13"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="看车结果：以上情况属实"
+                                android:textColor="@color/gray_13"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    &lt;!&ndash;客户已成功购买车辆&ndash;&gt;
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="16dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/ld" />
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="#54d78e"
+                                android:visibility="gone"></View>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:orientation="vertical"
+                            android:paddingBottom="30dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="客户已成功购买车辆"
+                                android:textColor="@color/black_1"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="成交金额：188.00万"
+                                android:textColor="@color/gray_13"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="付款日期：2018年06月30日"
+                                android:textColor="@color/gray_13"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>-->
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/act_order_info_left"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#f09636"
+                android:gravity="center"
+                android:text="提交客户看车信息"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:id="@+id/act_order_info_right"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#ed702d"
+                android:gravity="center"
+                android:text="拨打客户电话"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

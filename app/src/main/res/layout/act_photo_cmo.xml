@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentInsetStart="0dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleMarginStart="0dp"
+        >
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="上传图片"
+            android:textColor="@color/black_1"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ebebeb"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    android:id="@+id/tv_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1. 最多可以上传14张图片，您已上传0张；"
+                    android:textColor="@color/tv_12"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="2. 建议上传900px×600px的图片，大小不超过8M"
+                    android:textColor="@color/tv_12"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!--下面图片-->
+
+            <LinearLayout
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <LinearLayout
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <com.rch.custom.AddPhotoView
+                android:id="@+id/ad_view1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></com.rch.custom.AddPhotoView>
+            <com.rch.custom.AddPhotoView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/ad_view2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></com.rch.custom.AddPhotoView>
+
+            <com.rch.custom.AddPhotoView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/ad_view3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></com.rch.custom.AddPhotoView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.rch.custom.AddPhotoView
+                    android:id="@+id/ad_view4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></com.rch.custom.AddPhotoView>
+                <com.rch.custom.AddPhotoView
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/ad_view5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></com.rch.custom.AddPhotoView>
+                <com.rch.custom.AddPhotoView
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/ad_view6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></com.rch.custom.AddPhotoView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.rch.custom.AddPhotoView
+                    android:id="@+id/ad_view7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></com.rch.custom.AddPhotoView>
+                <com.rch.custom.AddPhotoView
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/ad_view8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></com.rch.custom.AddPhotoView>
+                <com.rch.custom.AddPhotoView
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/ad_view9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></com.rch.custom.AddPhotoView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.rch.custom.AddPhotoView
+                    android:id="@+id/ad_view10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></com.rch.custom.AddPhotoView>
+                <com.rch.custom.AddPhotoView
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/ad_view11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></com.rch.custom.AddPhotoView>
+                <com.rch.custom.AddPhotoView
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/ad_view12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></com.rch.custom.AddPhotoView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.rch.custom.AddPhotoView
+                    android:id="@+id/ad_view13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></com.rch.custom.AddPhotoView>
+                <com.rch.custom.AddPhotoView
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/ad_view14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></com.rch.custom.AddPhotoView>
+
+
+            </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

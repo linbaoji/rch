@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/gray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentInsetStart="0dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleMarginStart="0dp"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        >
+        <ImageView
+            android:id="@+id/failure_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:src="@mipmap/back"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="认证失败"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black_1"/>
+
+    </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_2"/>
+
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/failure_icon"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_fail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="认证未通过"
+        android:textColor="@color/black_1"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/failure_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:textSize="14sp"
+        android:text=""
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_reload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text="@string/resubmit"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        />
+
+
+    <TextView
+        android:id="@+id/failure_reset"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:text="重新认证"
+        android:gravity="center"
+        android:layout_marginTop="25dp"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center"
+        android:background="@drawable/button"
+        />
+
+    <TextView
+        android:id="@+id/tv_zbrz"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:text="暂不认证"
+        android:gravity="center"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/orange_2"
+        android:layout_gravity="center"
+        android:background="@drawable/publish_type"
+        />
+
+
+</LinearLayout>

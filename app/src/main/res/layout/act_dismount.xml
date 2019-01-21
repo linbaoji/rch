@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_layout_top"/>
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_marginTop="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="车辆状态"/>
+        <RadioGroup
+            android:id="@+id/rg_status"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rb_xj"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="35dp"
+                android:button="@drawable/rb_select"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="下架车辆"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/rb_ys"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:button="@drawable/rb_select"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="车辆已售"
+                android:textSize="13sp" />
+        </RadioGroup>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="提交"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/button"
+        android:textColor="@android:color/white"
+        />
+
+</LinearLayout>

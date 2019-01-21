@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_gly"
+        android:background="@color/gray_2"
+        android:padding="15dp"
+        android:textColor="@color/gray_13"
+        android:textSize="12sp"
+        android:text="管理员"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/my_fragment_user_layout"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <ImageView
+            android:id="@+id/iv_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/img_boy" />
+
+        <!--android:src="@mipmap/use_person"-->
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="车行名称/个人姓名"
+                        android:textColor="@color/black_1"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/my_fragment_authen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@mipmap/noscer" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="135 1234 5678"
+                    android:textColor="@color/gray_3"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_yc"
+            android:padding="15dp"
+            android:textSize="12sp"
+            android:text="移除"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_cy"
+        android:background="@color/gray_2"
+        android:padding="15dp"
+        android:textColor="@color/gray_13"
+        android:textSize="12sp"
+        android:text="成员"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <View
+        android:background="@color/gray_2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></View>
+
+
+</LinearLayout>

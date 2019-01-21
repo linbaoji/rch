@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!--整个被影厂的部分-->
+    <LinearLayout
+        android:id="@+id/ll_zt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--左边线条-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/view_sbd"
+                android:layout_width="1dp"
+                android:layout_height="14sp"
+                android:background="@color/line_blue"></View>
+
+            <ImageView
+                android:id="@+id/iv_dg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/tijiao" />
+
+            <View
+                android:id="@+id/view_line"
+                android:layout_width="1dp"
+                android:layout_height="55dp"
+                android:background="@color/line_blue"></View>
+
+
+        </LinearLayout>
+
+        <!--右边文字-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:orientation="vertical">
+
+            <LinearLayout style="@style/ll_soldcar">
+
+                <TextView
+                    android:id="@+id/tv_zt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="提交成功"
+                    android:textColor="@color/black_1"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="今天 09.20.20"
+                    android:textColor="@color/gray_3"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_info"
+                style="@style/tv_soldcar"
+                android:text="您的信息已被平台接收，请留意来电" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

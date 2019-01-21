@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        >
+        <ImageView
+            android:id="@+id/booking_details_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:src="@mipmap/back"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的预约"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black_1"/>
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/gray_2"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="114dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:gravity="center_vertical"
+        >
+        <ImageView
+            android:layout_width="128dp"
+            android:layout_height="85dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/banner"
+            />
+
+        <LinearLayout
+            android:layout_marginLeft="5dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/my_fragment_reserve_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="14sp"
+                android:textColor="@color/black_1"
+                />
+
+            <TextView
+                android:id="@+id/my_fragment_reserve_color"
+                android:layout_width="44dp"
+                android:layout_height="20dp"
+                android:text=""
+                android:gravity="center"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/my_reserve_color"
+                />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/my_fragment_reserve_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/right_arrow"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

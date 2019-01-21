@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/gray_2"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/common_layout_top"/>
+    <RelativeLayout
+        android:visibility="gone"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:id="@+id/rl_search"
+        android:layout_width="match_parent"
+        android:layout_height="33dp"
+        android:gravity="center_vertical"
+        android:layout_centerInParent="true"
+        android:background="@drawable/search_bg_white"
+
+        >
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/search_icon"
+            />
+
+        <EditText
+            android:background="@null"
+            android:layout_toRightOf="@+id/iv"
+            android:layout_centerVertical="true"
+            android:id="@+id/et_customer_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="搜索"
+            android:textSize="14sp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/gray_3"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <com.handmark.pulltorefresh.library.PullToRefreshRecyclerView
+        android:id="@+id/plv_yg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="fill"
+        ptr:ptrMode="both" />
+
+    <com.rch.custom.LoadingView
+        android:id="@+id/ld_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

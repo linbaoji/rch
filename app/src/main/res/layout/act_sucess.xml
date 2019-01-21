@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentInsetStart="0dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleMarginStart="0dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@android:color/white"
+        >
+        <ImageView
+            android:paddingRight="15dp"
+            android:id="@+id/serach_car_submit_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:src="@mipmap/back"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提交成功"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black_1"/>
+
+    </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/tj_icon"
+                android:layout_marginTop="30dp"
+                />
+
+            <TextView
+                android:id="@+id/content_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="信息提交成功"
+                android:textSize="18sp"
+                android:textColor="@color/black_1"
+                android:layout_marginTop="20dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="温馨提示：客服会尽快联系您，请留意来电"
+                android:textColor="@color/gray_3"
+                android:layout_marginTop="15dp"
+                />
+
+
+            <LinearLayout
+                android:layout_marginTop="30dp"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <!--继续逛逛-->
+                <TextView
+                    android:id="@+id/serach_car_submit_shop"
+                    android:layout_width="240dp"
+                    android:layout_height="40dp"
+                    android:text="返回订单消息"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/button"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+</LinearLayout>

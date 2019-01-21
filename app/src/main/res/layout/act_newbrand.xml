@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentInsetStart="0dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleMarginStart="0dp"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/brand_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:id="@+id/more_shop_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="选择品牌"
+            android:textColor="@color/black_1"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        //历史记录
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_histry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:background="@color/gray_2"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="浏览历史"
+                    android:textColor="@color/gray_5"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_scls"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/gray_2"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="删除历史"
+                    android:textColor="@color/gray_5"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+            <GridView
+                android:background="@color/white"
+                android:id="@+id/gv_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="5"
+                android:padding="15dp"></GridView>
+
+
+        </LinearLayout>
+
+
+        //整个大的
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/ll_histry">
+
+            <ListView
+                android:id="@+id/lv_brand"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:divider="@null" />
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="right|center"-->
+                <!--android:orientation="vertical">-->
+                <!---->
+                <!--<com.rch.custom.SideBar-->
+                    <!--android:id="@+id/sidrbar"-->
+                    <!--android:layout_width="30dip"-->
+                    <!--android:layout_height="400dp" />-->
+
+            <!--</LinearLayout>-->
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical">
+
+            <com.rch.custom.SideBar
+                android:id="@+id/sidrbar"
+                android:layout_width="30dip"
+                android:layout_height="400dp" />
+
+        </LinearLayout>
+
+        //右边车型
+        <ListView
+            android:id="@+id/lv_cx"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/white"
+            android:visibility="gone"></ListView>
+
+    </RelativeLayout>
+
+</LinearLayout>

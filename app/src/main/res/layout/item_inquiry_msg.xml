@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+        <TextView
+            android:paddingLeft="15dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/tv_name"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="张三"/>
+        <TextView
+            android:layout_toRightOf="@+id/tv_name"
+            android:layout_marginLeft="-8dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/tv_time"
+            style="@style/car_type_style"
+            android:textSize="13sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2018-12-12  14:00:00"/>
+        <TextView
+            android:id="@+id/tv_car_status"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tv_car_deal_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/car_status_style"
+            android:background="@drawable/green_white_bg"
+            android:textColor="@color/green_bg"
+            android:textSize="12sp"
+            android:text="新车"/>
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/tv_car_deal_status"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已看车"/>
+    </RelativeLayout>
+    <View style="@style/view_line"/>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/tv_order"
+            android:text="询价车辆:"/>
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/gray_6"
+            android:id="@+id/tv_car_name"
+            style="@style/tv_order"
+            android:text=""/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/tv_order"
+            android:text="所属车商:" />
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/gray_6"
+            android:id="@+id/tv_car_manage"
+            style="@style/tv_order"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/tv_order"
+            android:text="门店价:"/>
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/gray_6"
+            android:id="@+id/tv_mendian_price"
+            style="@style/tv_order"
+            android:text=""/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/tv_order"
+            android:text="批发价:" />
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/gray_6"
+            android:id="@+id/tv_pifa_price"
+            style="@style/tv_order"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_deal_person"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/tv_order"
+            android:text="处理人:" />
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/gray_6"
+            android:id="@+id/tv_deal_person"
+            style="@style/tv_order"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_deal_result"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/tv_order"
+            android:text="处理结果:" />
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/gray_6"
+            android:id="@+id/tv_deal_result"
+            style="@style/tv_order"
+            android:text="" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+    <View style="@style/view_line"/>
+    <RelativeLayout
+        android:id="@+id/rl_not_deal"
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+        <TextView
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tv_deal_status"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/tv_deal_info"
+            style="@style/tv_order"
+            android:textColor="@color/black_1"
+            android:textSize="12sp"
+            android:text="暂无处理结果，如果您已处理，请点击右侧操作" />
+        <TextView
+            android:id="@+id/tv_deal_status"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/car_type_style"
+            android:background="@drawable/blue_white_bg"
+            android:textColor="@color/orange_2"
+            android:text="我已处理"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        style="@style/view_line"/>
+</LinearLayout>

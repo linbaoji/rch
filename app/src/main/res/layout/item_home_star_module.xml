@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:padding="10dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/ll_home_star">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/star_shadow">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.rch.view.RoundedImageView
+                android:layout_marginRight="3dp"
+                android:id="@+id/iv_star_car_img"
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                android:scaleType="fitXY"
+                android:background="@drawable/round"
+                />
+
+            <TextView
+                android:id="@+id/tv_star_car_name"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:textColor="@color/black_1"
+                android:textSize="14sp"
+                android:text=""
+                />
+            <TextView
+                android:id="@+id/tv_star_car_price"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="14dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/star_money_red"
+                android:textSize="15sp"
+                android:text=""
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

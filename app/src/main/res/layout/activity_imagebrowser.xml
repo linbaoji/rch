@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ff171b19"
+    android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_3"
+        app:contentInsetStart="0dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleMarginStart="0dp"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/gray_3" >
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:onClick="goback"
+            >
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="12dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/back" />
+
+            <TextView
+                android:id="@+id/tvLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:layout_toRightOf="@id/ivBack"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            android:textSize="18sp" />
+
+
+
+        <ImageView
+            android:id="@+id/delete"
+            android:layout_width="32dip"
+            android:layout_height="32dip"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_action_delete"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+             />
+
+        <com.rch.photo.PhotoTextView
+            android:id="@+id/imagebrowser_ptv_page"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:text="11/11"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"/>
+
+        <com.rch.view.GridViewForScrollView
+            android:id="@+id/gvPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="523dp"
+            android:gravity="center"
+            android:horizontalSpacing="2.5dp"
+            android:numColumns="3"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="2.5dp" />
+
+    </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" >
+
+        <com.rch.photo.ScrollViewPager
+            android:id="@+id/imagebrowser_svp_pager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

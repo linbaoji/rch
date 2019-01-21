@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "E:\\AndroidProjcet\\rch\\library\\build\\intermediates\\res\\merged\\debug\\drawable\\indicator_bg_top.xml",
+        "source": "E:\\AndroidProjcet\\rch\\library\\src\\main\\res\\drawable\\indicator_bg_top.xml"
+    },
+    {
+        "merged": "E:\\AndroidProjcet\\rch\\library\\build\\intermediates\\res\\merged\\debug\\drawable\\indicator_bg_bottom.xml",
+        "source": "E:\\AndroidProjcet\\rch\\library\\src\\main\\res\\drawable\\indicator_bg_bottom.xml"
+    }
+]

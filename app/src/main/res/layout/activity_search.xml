@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:zhy="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentInsetStart="0dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleMarginStart="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:gravity="center">
+
+            <com.rch.custom.ClearEditText
+                android:id="@+id/search_et"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_weight="1.0"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/search_bg"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:drawablePadding="10dp"
+                android:imeOptions="actionSearch"
+                android:singleLine="true" />
+
+
+            <TextView
+                android:id="@+id/search_esc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="取消"
+                android:textSize="16sp"
+                android:textColor="@color/orange_4"
+                android:paddingRight="21dp" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <LinearLayout
+        android:id="@+id/ll_serchresult"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/search_count"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:text="搜索结果：共为您找到1,000条数据"
+            android:textSize="12sp"
+            android:gravity="center_vertical"
+            android:background="@color/gray"
+            android:visibility="gone"
+            android:textColor="@color/gray_13"
+            android:paddingLeft="15dp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/search_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_serchcace"
+        android:orientation="vertical"
+        android:layout_marginTop="15dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:textColor="@color/black_1"
+                android:textSize="15sp"
+                android:text="搜索历史"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_deleat"
+                android:layout_centerVertical="true"
+                android:drawablePadding="10dp"
+                android:drawableLeft="@mipmap/deleatbox"
+                android:layout_alignParentRight="true"
+                android:text="清空历史"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <com.zhy.view.flowlayout.TagFlowLayout
+            android:id="@+id/id_flowlayout"
+            zhy:max_select="-1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+        </com.zhy.view.flowlayout.TagFlowLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/gray_2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:contentInsetStart="0dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleMarginStart="0dp"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize">
+
+        <ImageView
+            android:id="@+id/act_order_info_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="填写客户看车信息"
+            android:textColor="@color/black_1"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/iv_more"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@mipmap/back" />
+
+
+    </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+    <RelativeLayout
+        android:id="@+id/rl_select"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:background="@android:color/white">
+
+
+
+        <TextView
+            android:textColor="#413f3b"
+            android:textSize="15sp"
+            android:text="实际看车日期"
+            android:layout_marginRight="15dp"
+            android:id="@+id/tvCommon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ivCommon"
+            />
+
+        <TextView
+            android:textColor="@color/gray_3"
+            android:textSize="14sp"
+            android:id="@+id/tv_time"
+            android:text="实际看车日期"
+            android:layout_marginRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tvCommon"
+            />
+
+
+
+        <ImageView
+            android:id="@+id/ivArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/right_arrow"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:padding="15dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="备注"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <EditText
+            android:id="@+id/et_mark"
+            android:maxLength="80"
+            android:gravity="top"
+            android:hint="80字以内"
+            android:background="@null"
+            android:paddingLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="130dp" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:enabled="false"
+        android:id="@+id/tv_upload"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="提交"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="40dp"
+        android:textColor="@android:color/white"
+        android:background="@color/gray_3"
+        />
+
+
+
+</LinearLayout>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentInsetStart="0dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleMarginStart="0dp"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        >
+        <ImageView
+            android:paddingRight="15dp"
+            android:id="@+id/auth_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:src="@mipmap/back"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black_1"/>
+
+    </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="您认证的角色？"
+                android:textColor="@color/black_1"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我们根据选择给您提供精准服务"
+                android:textColor="@color/gray_13"
+                android:textSize="15sp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                />
+
+            <!--第一个布局-->
+            <LinearLayout
+                android:id="@+id/authen_one_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:tag="1"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/authenticate_gs"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我是车商"
+                    android:textColor="@color/black_1"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="可发布车辆信息，也可以批发价购买车辆"
+                    android:textColor="@color/gray_3"
+                    android:textSize="13sp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                style="@style/view_line"/>
+
+
+            <!--第二个布局-->
+            <LinearLayout
+                android:id="@+id/authen_two_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:tag="2"
+                android:layout_marginBottom="15dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/authenticate_gr"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我是分销商"
+                    android:textColor="@color/black_1"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="百家直营门店、万台车辆信息，等你入驻"
+                    android:textColor="@color/gray_3"
+                    android:textSize="13sp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginBottom="60dp"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tv_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="暂不认证，跳过>>"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

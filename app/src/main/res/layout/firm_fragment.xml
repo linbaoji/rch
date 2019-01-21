@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray"
+            android:orientation="vertical">
+            <!--  账户信息  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="请填写登录账号信息"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:background="@color/gray_2"
+                android:textSize="12sp"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_2"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:background="@android:color/white"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="注册邮箱："
+                    android:textSize="14sp"
+                    android:textColor="@color/black_1"
+                    />
+
+                <EditText
+                    android:id="@+id/firm_email"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:layout_marginLeft="10dp"
+                    android:hint="请慎重填写,不可更改"
+                    android:singleLine="true"
+                    android:background="@null"
+                    android:textSize="14sp"
+                    />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_2"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:background="@android:color/white"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="输入密码："
+                    android:textSize="14sp"
+                    android:textColor="@color/black_1"
+                    />
+
+                <EditText
+                    android:id="@+id/firm_pwd"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:layout_marginLeft="10dp"
+                    android:hint="请输入6-20位字符"
+                    android:singleLine="true"
+                    android:background="@null"
+                    android:maxLength="20"
+                    android:inputType="textPassword"
+                    android:textSize="14sp"
+                    />
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_2"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:background="@android:color/white"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="确认密码："
+                    android:textSize="14sp"
+                    android:textColor="@color/black_1"
+                    />
+
+                <EditText
+                    android:id="@+id/firm_confirm_pwd"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:layout_marginLeft="10dp"
+                    android:hint="清再次输入密码"
+                    android:singleLine="true"
+                    android:background="@null"
+                    android:maxLength="20"
+                    android:inputType="textPassword"
+                    android:textSize="14sp"
+                    />
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_2"/>
+            </LinearLayout>
+            <!--企业信息-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="请准确填写企业信息"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:background="@color/gray_2"
+                android:textSize="12sp"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_2"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:background="@android:color/white"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="企业名称："
+                    android:textSize="13sp"
+                    android:textColor="@color/black_1"
+                    />
+
+                <EditText
+                    android:id="@+id/firm_name"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:layout_marginLeft="10dp"
+                    android:hint="需和您的营业执照上的名称一致"
+                    android:maxLength="30"
+                    android:singleLine="true"
+                    android:background="@null"
+                    android:textSize="13sp"
+                    />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_2"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:visibility="gone"
+                android:background="@android:color/white"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="统一社会信用代码："
+                    android:textSize="14sp"
+                    android:textColor="@color/black_1"
+                    />
+
+                <EditText
+                    android:id="@+id/firm_code"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:layout_marginLeft="10dp"
+                    android:hint="营业执照上对应的代码"
+                    android:singleLine="true"
+                    android:background="@null"
+                    android:maxLength="20"
+                    android:textSize="14sp"
+                    />
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_2"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:background="@android:color/white"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="所在地："
+                    android:textSize="13sp"
+                    android:textColor="@color/black_1"
+                    />
+
+                <TextView
+                    android:id="@+id/firm_area"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/gray_3"
+                    android:text="请选择省市"
+                    android:gravity="center_vertical"
+                    />
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_2"/>
+
+            <LinearLayout
+                android:minHeight="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:background="@android:color/white"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="地址："
+                    android:textSize="13sp"
+                    android:textColor="@color/black_1"
+                    />
+
+                <EditText
+                    android:id="@+id/firm_address"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:layout_marginLeft="10dp"
+                    android:hint="请输入地址"
+                    android:singleLine="false"
+                    android:background="@null"
+                    android:maxLength="60"
+                    android:textSize="13sp"
+                    />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_2"/>
+
+            <!--照片上传-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:gravity="center_vertical"
+                android:background="@color/gray_2"
+                android:paddingLeft="15dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="为了更快的通过审核，请上传营业执照"
+                    android:textSize="12sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="注:营业执照仅供审核使用，不会泄露您的企业信息"
+                    android:layout_marginTop="3dp"
+                    android:textColor="@color/orange_1"
+                    android:textSize="12sp"
+                    />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_2"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:paddingLeft="15dp"
+                android:gravity="center_vertical"
+                android:text="营业执照"
+                android:background="@android:color/white"
+                android:textColor="@color/black_1"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_2"/>
+
+            <LinearLayout
+                android:id="@+id/firm_up_photo"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:gravity="center_vertical"
+                android:background="@android:color/white"
+                android:paddingLeft="15dp"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/camera"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    >
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="上传营业执照"
+                        android:textColor="@color/black_1"
+                        android:textSize="14sp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="点击上传"
+                        android:textColor="@color/gray_1"
+                        android:textSize="14sp"
+                        android:layout_marginTop="5dp"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/firm_photo"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:scaleType="centerInside"
+                android:visibility="gone"
+                />
+
+
+            <TextView
+                android:id="@+id/firm_ok"
+                android:layout_width="280dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="提交审核"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/button"
+                android:textColor="@android:color/white"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:visibility="gone"
+                android:gravity="center"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/distribution_desc"
+                    android:textSize="11sp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="《嵘车汇分销用户服务协议》"
+                    android:textColor="@color/blue_1"
+                    android:textSize="11sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="和"
+                    android:textSize="11sp"
+                    />
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="《用户注册协议》"
+                android:textColor="@color/blue_1"
+                android:layout_marginLeft="40dp"
+                android:textSize="11sp"
+                android:visibility="gone"
+                android:paddingBottom="10dp"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

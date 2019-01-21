@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="240dp"
+        android:background="@mipmap/certified_frame"
+        android:layout_marginTop="48dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="恭喜您 认证成功"
+            android:textColor="@color/orange_9"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:id="@+id/certified_prompt_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="恭喜您 认证成功"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/gray_11"
+            android:textSize="12sp"
+            />
+
+        <TextView
+            android:id="@+id/certified_prompt_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="去分享车辆"
+            android:layout_marginTop="15dp"
+            android:paddingBottom="8dp"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:background="@mipmap/certified_btn"
+            android:textSize="12sp"
+            />
+
+
+    </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="96dp"
+            android:src="@mipmap/firm_icon"
+            android:layout_centerHorizontal="true"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_rzbg"
+        android:background="@mipmap/enterpriserz"
+        android:layout_width="wrap_content"
+        android:layout_height="285dp">
+
+
+        <ImageView
+            android:id="@+id/iv_shareorfinsh"
+            android:layout_marginBottom="55dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/goshare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</LinearLayout>

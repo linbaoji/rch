@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray"
+    android:gravity="center"
+    >
+
+    <TextView
+        android:id="@+id/notif_data"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:text="昨天10:20"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/notif_time_bg"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:orientation="vertical"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shadow_bg"
+        >
+
+        <TextView
+            android:id="@+id/notif_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/black_1"
+            />
+
+
+        <TextView
+            android:id="@+id/notif_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:maxLines="3"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/gray_3"
+            android:lines="2"
+            android:ellipsize="end"
+            android:text=""
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="查看全文"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/black_1"
+                android:textSize="15sp"
+                />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/right_arrow"
+                android:layout_marginRight="15dp"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

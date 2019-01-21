@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ll_tab"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <TextView
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/gray_13"
+        android:background="@drawable/gray_rectangle"
+        android:text="hahahhahahhah"
+        android:gravity="center_vertical"
+        android:id="@+id/tv_lable"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

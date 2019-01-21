@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@android:color/white"
+        >
+        <ImageView
+            android:id="@+id/perfect_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:src="@mipmap/back"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="完善信息"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black_1"/>
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <!--描点-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                >
+
+                <!--绿色按钮-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="53dp"
+                    android:layout_marginRight="53dp"
+                    android:layout_marginTop="23dp"
+                    android:gravity="center_vertical"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/circle_one_sel_icon"
+                        />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="2dp"
+                        android:background="@color/line_blue"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/circle_two_sel_icon"
+                        />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="2dp"
+                        android:background="@color/line_blue"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/circle_two_sel_icon"
+                        />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="2dp"
+                        android:background="@color/gray_3"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/circle_three_no_sel_icon"
+                        />
+
+                </LinearLayout>
+
+                <!--文字描述-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginRight="45dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:text="快速卖车"
+                        android:textSize="14sp"
+
+                        android:textColor="@color/black_2"
+                        />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:text="获取报价"
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        android:textColor="@color/black_2"
+                        />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:text="获取报价"
+                        android:gravity="right"
+                        android:textSize="14sp"
+                        android:textColor="@color/black_2"
+                        />
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:text="完成"
+                        android:textSize="14sp"
+                        android:paddingRight="10dp"
+                        android:gravity="end"
+                        android:textColor="@color/black_2"
+                        />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@mipmap/on_frame_icon"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="补充信息获得精准报价"
+                        android:textStyle="bold"
+                        android:textColor="@color/black_2"
+                        android:layout_marginTop="5dp"
+                        android:textSize="14sp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="发布更多渠道，获得更多的报价"
+                        android:textColor="@color/gray_13"
+                        android:layout_marginTop="5dp"
+                        android:textSize="12sp"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/gray"/>
+
+
+
+            <!--期望售价-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="期望售价"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="@color/black_1"
+                    />
+
+                <EditText
+                    android:id="@+id/perfect_price"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:hint="可支持两位小数"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/gray_3"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="14sp"
+                    android:background="@null"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="万元"
+                    android:layout_marginRight="15dp"
+                    android:textColor="@color/black_1"
+                    />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"/>
+
+            <!--上传图片-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="上传图片"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/black_1"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/img_layout"
+                    android:layout_width="105dp"
+                    android:layout_height="58dp"
+                    android:background="@color/gray_2"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/up_icon"
+                        />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="105dp"
+                    android:layout_height="58dp"
+                    android:src="@mipmap/up_icon"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginLeft="20dp"
+                    android:visibility="gone"
+                    />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="上传车辆正45度照片"
+                        android:textColor="@color/black_1"
+                        android:textSize="14sp"
+                        />
+
+                    <TextView
+                        android:layout_width="133dp"
+                        android:layout_height="wrap_content"
+                        android:text="据统计，上传图片售出率更高哦"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/gray_3"
+                        android:textSize="12sp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 查看样例图"
+                        android:textColor="@color/orange_2"
+                        android:layout_marginTop="5dp"
+                        android:textSize="12sp"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"/>
+
+            <!--手机号-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="手机号"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="@color/black_1"
+                    />
+
+                <TextView
+                    android:id="@+id/perfect_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:text="请输入手机号码"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/gray_3"
+                    android:layout_marginLeft="20dp"
+                    />
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"/>
+
+            <!--验证码-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="验证码"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="@color/black_1"
+                    />
+
+                <EditText
+                    android:maxLength="6"
+                    android:id="@+id/perfect_code"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:hint="验证码"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/gray_3"
+                    android:layout_marginLeft="20dp"
+                    android:inputType="number"
+                    android:textSize="14sp"
+                    android:background="@null"
+                    />
+
+                <TextView
+                    android:id="@+id/perfect_send_code"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/button"
+                    android:textSize="11sp"
+                    android:text="获取验证码"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"
+                    android:layout_marginRight="20dp"
+                    />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"/>
+
+            <!--发布类型-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:visibility="gone"
+                android:gravity="center"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="发布类型"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="@color/black_1"
+                    />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    >
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/publish_type"
+                        android:textSize="14sp"
+                        android:text="帮卖的车"
+                        android:textColor="@color/orange_2"
+                        android:gravity="center"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        />
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="30dp"
+                        android:textSize="14sp"
+                        android:text="自己卖车"
+                        android:textColor="@color/gray_3"
+                        android:gravity="center"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"/>
+
+
+
+            <TextView
+                android:id="@+id/perfect_ok"
+                android:layout_width="280dp"
+                android:layout_height="40dp"
+                android:text="提交"
+                android:background="@drawable/button"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="55dp"
+                android:layout_marginBottom="105dp"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

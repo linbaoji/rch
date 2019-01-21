@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    app:ignore="NamespaceTypo"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:contentInsetStart="0dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleMarginStart="0dp"
+        android:minHeight="?attr/actionBarSize">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="?android:attr/actionBarSize">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/black_1"
+            android:text="生意圈" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_right"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="14sp"
+            android:text="发布" />
+    </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <com.rch.custom.LoadingView
+        android:id="@+id/load_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.rch.custom.LoadingView>
+
+
+    <RelativeLayout
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.handmark.pulltorefresh.library.PullToRefreshRecyclerView
+            android:background="@color/white"
+            android:gravity="fill"
+            ptr:ptrMode="both"
+            android:id="@+id/circle_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

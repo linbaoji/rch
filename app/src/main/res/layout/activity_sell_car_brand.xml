@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentInsetStart="0dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleMarginStart="0dp"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@android:color/white"
+        >
+        <ImageView
+            android:paddingRight="15dp"
+            android:id="@+id/sell_brand_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:src="@mipmap/back"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="品牌型号"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black_1"/>
+
+    </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+
+        <ScrollView
+            android:id="@+id/sell_brand_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/sell_brand_history_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:background="@color/gray_2"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="15dp"
+                        >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:text="历史记录"
+                            android:textSize="14sp"
+                            android:textColor="@color/gray_5"
+                            />
+
+                        <TextView
+                            android:id="@+id/sell_brand_del"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="删除历史"
+                            android:textSize="14sp"
+                            android:paddingRight="15dp"
+                            android:textColor="@color/gray_5"
+                            />
+
+                    </LinearLayout>
+
+                    <com.rch.custom.BrandBrowseHistoryLayout
+                        android:id="@+id/sell_brand_history"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+                </LinearLayout>
+
+                <com.rch.common.SellCarBrandLayout
+                    android:id="@+id/sell_brand_layout_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="160dp"
+            android:background="@android:color/white"
+            android:visibility="gone"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"/>
+
+
+        <com.rch.custom.CustomContactViewControl
+            android:id="@+id/sell_brand_chat"
+            android:layout_width="20dp"
+            android:layout_height="400dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:paddingRight="10dp"
+            />
+
+
+        <com.rch.custom.LoadingView
+            android:id="@+id/load_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/home_lable_container" />
+    </RelativeLayout>
+
+
+</LinearLayout>

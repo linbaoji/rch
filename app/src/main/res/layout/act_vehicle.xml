@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/gray_2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize">
+
+        <ImageView
+            android:id="@+id/car_detail_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="汽车检测"
+            android:textColor="@color/black_1"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="117dp"
+                android:src="@mipmap/jc_icon"
+                android:scaleType="fitXY"
+                />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/rl_vp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/car_detail_vp"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <!--<TextView-->
+                <!--android:id="@+id/car_detail_index"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_marginBottom="15dp"-->
+                <!--android:layout_marginRight="15dp"-->
+                <!--android:text="1/12" />-->
+
+            </LinearLayout>
+            <com.rch.custom.CommonView
+                app:centTextColor="#999999"
+                app:centTextSize="14sp"
+                app:desTextSize="14sp"
+                app:isShowTextCent="true"
+                app:centText="请选择品牌"
+                app:isShowCategoryImage="false"
+                app:desTextColor="@color/gray_13"
+                app:desText="品牌车型"
+                android:layout_width="match_parent"
+                android:id="@+id/act_brand"
+                android:layout_height="44dp"></com.rch.custom.CommonView>
+
+            <com.rch.custom.CommonView
+                app:centTextColor="#999999"
+                android:id="@+id/cv_city"
+                android:layout_marginTop="1dp"
+                app:centTextSize="14sp"
+                app:desTextSize="14sp"
+                app:isShowTextCent="true"
+                app:centText="请选择车辆检测地区"
+                app:isShowCategoryImage="false"
+                app:desTextColor="@color/gray_13"
+                app:desText="车辆属地"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"></com.rch.custom.CommonView>
+
+            <EditText
+                android:maxLength="100"
+                android:id="@+id/act_address"
+                android:layout_marginTop="1dp"
+                android:gravity="top"
+                android:textSize="14sp"
+                android:padding="15dp"
+                android:background="@color/white"
+                android:hint="请输入上门检测详细地址"
+                android:layout_width="match_parent"
+                android:layout_height="80dp" />
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="委托人"
+                    android:textColor="@color/gray_13"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/act_proper"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1.0"
+                    android:background="@color/white"
+                    android:hint="请输入委托人姓名"
+                    android:maxLength="20"
+                    android:singleLine="true"
+                    android:textSize="14sp" />
+
+
+                <ImageView
+                    android:id="@+id/ivArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/right_arrow" />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                />
+            <LinearLayout
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="44dp">
+
+                <TextView
+                    android:textColor="@color/gray_13"
+                    android:textSize="14sp"
+                    android:text="联系电话"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/act_phone"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="14sp"
+                    android:background="@color/white"
+                    android:hint="请输入联系电话"
+                    android:singleLine="true"
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:enabled="false"
+                    android:id="@+id/act_ok"
+                    android:layout_marginTop="75dp"
+                    android:gravity="center"
+                    android:text="提交订单"
+                    android:layout_width="280dp"
+                    android:layout_gravity="center"
+                    android:background="@color/gray_3"
+                    android:textColor="@android:color/white"
+                    android:layout_height="44dp" />
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:checked="false"
+                        android:id="@+id/act_checks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:text="我阅读并且同意"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_chekinfo"
+                        android:text="《U买车检测服务承诺准则》"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/orange_2"
+                        android:textSize="12sp"
+                        />
+
+                </LinearLayout>
+                <TextView
+                    android:text="如有疑问请致电客服400-189-0079"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:textColor="@color/gray_3"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"/>
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

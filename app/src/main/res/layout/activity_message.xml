@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentInsetStart="0dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleMarginStart="0dp"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@android:color/white"
+        >
+        <ImageView
+            android:id="@+id/message_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="25dp"
+            android:src="@mipmap/back"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的消息"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/gray_3"/>
+
+    </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/gray_2"/>
+
+    <!--订单消息-->
+    <LinearLayout
+        android:id="@+id/msg_list_one"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@android:color/white"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/order_icon"
+            android:layout_marginLeft="15dp"
+            />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="订单消息"
+                android:textSize="15sp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black_1"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="查看客户预约订单消息"
+                android:textSize="13dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/gray_3"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/msg_one_subscript"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:text="12"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:background="@drawable/tips_circle"
+            android:layout_marginRight="10dp"
+            android:visibility="invisible"
+            />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        />
+
+    <!--系统消息-->
+    <LinearLayout
+        android:id="@+id/msg_list_two"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@android:color/white"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/notice_icon"
+            android:layout_marginLeft="15dp"
+            />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="系统消息"
+                android:textSize="15sp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black_1"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="平台的通知、活动等信息"
+                android:textSize="13dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/gray_3"
+                />
+
+
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/msg_two_subscript"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:text="12"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:background="@drawable/tips_circle"
+            android:layout_marginRight="10dp"
+            android:visibility="invisible"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        />
+
+    <!--在线客服-->
+    <LinearLayout
+        android:id="@+id/msg_list_three"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@android:color/white"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/client_icon"
+            android:layout_marginLeft="15dp"
+            />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="在线客服"
+                android:textSize="15sp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black_1"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="车辆等相关问题沟通"
+                android:textSize="13dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/gray_3"
+                />
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/msg_three_subscript"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:text="12"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:background="@drawable/tips_circle"
+            android:layout_marginRight="10dp"
+            android:visibility="invisible"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

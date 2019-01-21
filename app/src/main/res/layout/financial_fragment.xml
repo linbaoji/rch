@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+
+    android:background="@color/gray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@android:color/white"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="金融"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black_1"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <!--第一个模块布局-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:background="@mipmap/financial_one_bg_icon"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="小额授信"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="12sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="二手车订单融资"
+                    android:textColor="@android:color/white"
+                    android:textSize="21sp"
+                    android:layout_marginTop="15dp"
+                    android:layout_gravity="center"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="最长期限 12个月"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="最高额度 50万"
+                        android:textColor="@android:color/white"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="12sp"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/financial_fragment_one_ok"
+                    android:layout_width="80dp"
+                    android:layout_height="24dp"
+                    android:text="立即申请"
+                    android:textColor="@color/yellow"
+                    android:textSize="12sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:tag="1"
+                    android:background="@drawable/white_button"
+                    android:layout_marginTop="28dp"
+                    />
+
+            </LinearLayout>
+
+
+            <!--第二个模块布局-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:background="@mipmap/financial_two_bg_icon"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="综合授信"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="12sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="整车、采购贷订单融资"
+                    android:textColor="@android:color/white"
+                    android:textSize="21sp"
+                    android:layout_marginTop="15dp"
+                    android:layout_gravity="center"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="最长期限 12个月"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="最高额度 200万"
+                        android:textColor="@android:color/white"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="12sp"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/financial_fragment_two_ok"
+                    android:layout_width="80dp"
+                    android:layout_height="24dp"
+                    android:text="立即申请"
+                    android:textColor="@color/yellow"
+                    android:textSize="12sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/white_button"
+                    android:layout_marginTop="28dp"
+                    />
+
+            </LinearLayout>
+
+
+            <!--第三个模块布局-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@mipmap/financial_three_bg_icon"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="小额授信"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="12sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="汽车抵押贷款"
+                    android:textColor="@android:color/white"
+                    android:textSize="21sp"
+                    android:layout_marginTop="15dp"
+                    android:layout_gravity="center"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="最长期限 12个月"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="最高额度 50万"
+                        android:textColor="@android:color/white"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="12sp"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/financial_fragment_three_ok"
+                    android:layout_width="80dp"
+                    android:layout_height="24dp"
+                    android:text="立即申请"
+                    android:textColor="@color/yellow"
+                    android:textSize="12sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/white_button"
+                    android:layout_marginTop="28dp"
+                    android:tag="3"
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

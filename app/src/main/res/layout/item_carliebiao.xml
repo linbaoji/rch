@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:paddingBottom="15dp"
+        android:minHeight="122dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:id="@+id/shop_list_adapter_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <RelativeLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="120dp"
+            android:layout_height="80dp">
+
+            <ImageView
+                android:id="@+id/shop_list_adapter_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@mipmap/banner" />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/iv_lefttop"
+                android:layout_width="27dp"
+                android:layout_height="18dp"
+                android:src="@mipmap/tuijian" />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/iv_xj"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/xiajia"
+                android:layout_width="45dp"
+                android:layout_height="45dp" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_startcar"
+                android:gravity="center"
+                android:background="#33000000"
+                android:textColor="@color/white"
+                android:textSize="9sp"
+                android:text="明星车款"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+        </RelativeLayout>
+
+        <!--android:background="#33000000"-->
+        <!--20的不透明度-->
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:minHeight="90dp"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1.0">
+
+
+            <TextView
+                android:gravity="top"
+                android:maxLines="2"
+                android:id="@+id/shop_list_adapter_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:text="000000"
+                android:textColor="@color/black_1"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_below="@id/shop_list_adapter_title"
+                android:id="@+id/shop_list_adapter_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="ffffffff"
+                android:textColor="@color/gray_4"
+                android:textSize="12sp" />
+
+            <com.rch.custom.ItemLabelLayout
+                android:visibility="gone"
+                android:id="@+id/ll_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shop_list_adapter_desc"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+            </com.rch.custom.ItemLabelLayout>
+
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+                <LinearLayout
+                    android:id="@+id/shop_list_adapter_deal_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/shop_list_adapter_ordinary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="门店价:"
+                        android:textColor="@color/gray_4"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/shop_list_adapter_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:singleLine="true"
+                        android:textColor="@color/orange_2"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/shop_list_adapter_discount_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp">
+
+                    <TextView
+                        android:id="@+id/shop_list_adapter_store"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="企业价:"
+                        android:textColor="@color/gray_4"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/shop_list_adapter_area"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:singleLine="true"
+                        android:textColor="@color/orange_2"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="4dp"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp">
+
+                <TextView
+                    android:singleLine="true"
+                    android:enabled="true"
+                    android:layout_weight="1"
+                    android:id="@+id/tv_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="200-300万"
+                    android:textColor="@color/money_red"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_city"
+                    android:singleLine="true"
+                    android:enabled="true"
+                    android:gravity="right"
+                    android:layout_width="44dp"
+                    android:layout_height="wrap_content"
+                    android:text="北京"
+                    android:textColor="#929292"
+                    android:textSize="12sp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/gray_2" />
+
+    <View
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:visibility="gone"
+        android:background="@color/gray_2"
+        android:id="@+id/view_car_manage"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+</LinearLayout>

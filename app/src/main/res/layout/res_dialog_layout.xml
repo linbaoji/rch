@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:background="@color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="270dp"
+            android:layout_height="287dp"
+            android:background="@drawable/shadow_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/reg_icon"
+                />
+            <TextView
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="  恭喜您，注册成功赶紧去认证入驻吧！"
+                android:textSize="15sp"
+                android:textColor="@color/orange_4"
+                android:layout_marginLeft="5dp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                />
+            
+            <ImageView
+                android:id="@+id/reg_rz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/reg_btn"
+                android:layout_marginTop="30dp"
+                />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/reg_esc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/delete"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"
+            />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_layout_top"/>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:background="@color/taupe_color"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/notice"/>
+        <TextView
+            android:textSize="13sp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/orange_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/notice"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="真实姓名："
+            android:textSize="13sp"
+            android:textColor="@color/black_1"
+            />
+
+        <EditText
+            android:id="@+id/et_real_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:layout_marginLeft="10dp"
+            android:hint="请输入真实姓名"
+            android:maxLength="30"
+            android:singleLine="true"
+            android:background="@null"
+            android:textSize="13sp"
+            />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_2"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="身份证号："
+            android:textSize="13sp"
+            android:textColor="@color/black_1"
+            />
+
+        <EditText
+            android:id="@+id/et_card_no"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:layout_marginLeft="10dp"
+            android:hint="18位身份证号"
+            android:maxLength="18"
+            android:singleLine="true"
+            android:background="@null"
+            android:textSize="13sp"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="提交"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/button"
+        android:textColor="@android:color/white"
+        />
+</LinearLayout>

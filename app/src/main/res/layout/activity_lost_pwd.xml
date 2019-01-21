@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentInsetStart="0dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleMarginStart="0dp"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@android:color/white"
+        >
+        <ImageView
+            android:id="@+id/lost_pwd_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:src="@mipmap/back"
+            />
+
+        <TextView
+            android:id="@+id/lost_pwd_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="找回密码"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black_1"/>
+
+    </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_2"/>
+
+    <EditText
+        android:id="@+id/lost_pwd_phone"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@android:color/white"
+        android:layout_marginTop="40dp"
+        android:hint="通过邮箱地址或手机号码找回"
+        android:textSize="14sp"
+        android:drawableLeft="@mipmap/login_phone"
+        android:paddingLeft="15dp"
+        android:inputType="phone"
+        android:drawablePadding="10dp"
+        android:maxLength="11"
+        />
+
+
+    <TextView
+        android:id="@+id/lost_pwd_ok"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="发送验证码"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button"
+        android:textColor="@android:color/white"
+        />
+
+</LinearLayout>

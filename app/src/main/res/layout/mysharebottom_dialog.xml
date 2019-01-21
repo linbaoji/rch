@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:gravity="center_horizontal"
+                android:textColor="@color/gray_3"
+                android:textSize="16sp"
+                android:text="您当前身份："
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:gravity="center_horizontal"
+                android:id="@+id/tv_name"
+                android:textColor="@color/black_1"
+                android:textSize="16sp"
+                android:text="张三 (分销商)"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/ll_share"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:src="@mipmap/sharewx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/black_1"
+                    android:textSize="14sp"
+                    android:text="微信"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_sharepyq"
+                android:layout_marginLeft="80dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:src="@mipmap/pyq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/black_1"
+                    android:textSize="14sp"
+                    android:text="朋友圈"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginTop="25dp"
+            style="@style/view_line"></View>
+
+        <TextView
+            android:id="@+id/tv_cancle"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textColor="#413f3b"
+            android:textSize="16sp"
+            android:text="取消"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

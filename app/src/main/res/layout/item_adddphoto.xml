@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_phone"
+        android:layout_width="108dp"
+        android:layout_height="108dp"
+        android:background="@drawable/gray_brown"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+
+            <ImageView
+                android:id="@+id/iv_fm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/fbfm" />
+
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/iv_fm_deleat"
+                style="@style/iv_deleat"
+                />
+
+            <LinearLayout
+                android:visibility="gone"
+                style="@style/ll_jd"
+                android:id="@+id/ll_fmpr"
+                >
+
+                <ProgressBar
+                    android:id="@+id/pb_fm"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="50dp"
+                    android:layout_height="5dp"
+                    android:max="100"
+                    android:progress="50"
+                    android:progressDrawable="@drawable/progressbar"
+                    android:secondaryProgress="0" />
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:id="@+id/tv_fmjd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已上传50%"
+                    android:textSize="10sp" />
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_fmlog"
+                android:visibility="gone"
+                android:src="@mipmap/fbfmlog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@id/iv_fm"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textSize="12sp"
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="左前侧45度" />
+
+            <TextView
+                android:id="@+id/tv_red"
+                style="@style/tv_red_xin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+</LinearLayout>

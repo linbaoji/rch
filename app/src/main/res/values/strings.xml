@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">U买车</string>
+    <string name="distribution_desc">点击"提交注册信息"代表已同意</string>
+    <string name="hotline">400 189 0079</string>
+    <string name="hotline_text">客服电话：400 189 0079</string>
+    <string name="login_desc">我已阅读并同意</string>
+
+
+    <string name="pro_order_desc">请按以下提示准备资料，并等待工作人员跟你电话联系 &#160;&#160; 必备：</string>
+
+    <string name="pro_order_desc_1">*征信报告（如购买车辆指导价高于等于10万，需提供） &#160;&#160;额外提供：</string>
+
+    <string name="pro_order_desc_2"> *财产正面（如：房产证、银行流水、社保/公积金缴纳证明等）将有助于您分期更高价位车型</string>
+
+    <string name="filter_vcode">.0123456789</string>
+    <string name="vin_code">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+
+    <string name="notice">您认证的是分销商，请如实填写您的身份信息。</string>
+    <string name="reson">你长得太美，无法识别</string>
+    <string name="resubmit">请重新上传你的身份证照片</string>
+    <string name="viewpager_indicator">%1$d/%2$d</string>
+
+    <string name="shty_code">0123456789ABCDEFGHJKLMNPQRTUWXY</string>
+    <!--发布车辆协议名称-->
+    <string name="car_agreement">《车辆信息管理条款》</string>
+    <string name="car_agree">车辆信息管理条款</string>
+    <string name="filter_hzrs">123456789</string>
+    <string name="filter_call">0123456789-</string>
+</resources>
+

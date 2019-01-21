@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ptr="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/gray_2"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:background="@color/white"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentInsetStart="0dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleMarginStart="0dp"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize">
+
+        <ImageView
+
+            android:paddingRight="15dp"
+            android:id="@+id/iv_finsh"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="员工管理"
+            android:textColor="@color/black_1"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/iv_tianjia"
+            android:padding="15dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/tianjia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+
+    </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <RelativeLayout
+        android:visibility="gone"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:id="@+id/rl_search"
+        android:layout_width="match_parent"
+        android:layout_height="33dp"
+        android:gravity="center_vertical"
+        android:layout_centerInParent="true"
+        android:background="@drawable/search_bg_white"
+
+        >
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/search_icon"
+            />
+
+        <EditText
+            android:background="@null"
+            android:layout_toRightOf="@+id/iv"
+            android:layout_centerVertical="true"
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="搜索"
+            android:textSize="14sp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/gray_3"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_margin="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="管理员"/>
+            <com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView
+                android:id="@+id/plv_gly"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="fill"
+                ptr:ptrMode="both" />
+            <TextView
+                android:id="@+id/tv_member"
+                android:layout_margin="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="成员"/>
+            <com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView
+                android:id="@+id/plv_yg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="fill"
+                ptr:ptrMode="both" />
+        </LinearLayout>
+
+
+
+
+    <com.rch.custom.LoadingView
+        android:id="@+id/ld_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:id="@+id/ll_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="54dp"
+            android:background="@drawable/white_bg_radiu"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="50dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="发现新版本"
+                    android:textColor="@color/black_2"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="V1.1.1"
+                    android:textColor="@color/gray_3"
+                    android:textSize="13sp" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_dec1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="1.现版本正价了二手车现版本正价了二手车" />
+
+
+            <ImageView
+                android:id="@+id/iv_upadate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:src="@mipmap/update" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="为了不影响使用,请更新至最新版本" />
+
+            <CheckBox
+                android:visibility="gone"
+                android:textColor="@color/black_1"
+                android:layout_marginTop="25dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:checked="false"
+                android:button="@drawable/rb_select"
+                android:textSize="15sp"
+                android:id="@+id/ck_box"
+                android:text="不再提示此信息"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_delet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_info"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/delete" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/updatetop" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

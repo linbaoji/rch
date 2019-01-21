@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentInsetStart="0dp"
+        android:background="@android:color/white"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleMarginStart="0dp"
+        >
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        >
+        <ImageView
+            android:paddingRight="15dp"
+            android:id="@+id/car_history_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:src="@mipmap/back"
+            />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户协议"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black_1"/>
+
+    </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <WebView
+        android:id="@+id/wb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:background="@color/white"
+                android:textSize="18sp"
+                android:textColor="@color/gray_3"
+                android:gravity="center"
+                android:text="不同意"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/tv_agree"
+                android:background="@color/orange_2"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:text="同意"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+        </LinearLayout>
+        <com.rch.custom.LoadingView
+            android:id="@+id/load_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

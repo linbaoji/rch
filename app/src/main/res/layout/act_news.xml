@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/common_layout_top"></include>
+
+    <RelativeLayout
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.handmark.pulltorefresh.library.PullToRefreshRecyclerView
+            android:background="@color/white"
+            android:gravity="fill"
+            ptr:ptrMode="both"
+            android:id="@+id/new_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

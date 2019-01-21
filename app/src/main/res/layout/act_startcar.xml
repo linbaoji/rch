@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/common_layout_top"></include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:id="@+id/rl_newcar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_newcar"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="新车"
+                    android:textSize="14sp"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/btn_org1" />
+
+                <View
+                    android:id="@+id/view_newcar"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/btn_org1"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="15dp"
+                    android:layout_height="3sp"></View>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:id="@+id/rl_seccar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_seccar"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="二手车"
+                    android:textSize="14sp"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/black_1" />
+
+                <View
+                    android:visibility="gone"
+                    android:id="@+id/view_seccar"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/black_2"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="15dp"
+                    android:layout_height="3sp"></View>
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <View style="@style/view_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.handmark.pulltorefresh.library.PullToRefreshRecyclerView
+            android:background="@color/white"
+            android:gravity="fill"
+            ptr:ptrMode="both"
+            android:id="@+id/home_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_totle"
+            android:layout_marginTop="5dp"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/home_tab_container"
+            android:background="@drawable/orng_bg_radio"
+            android:text="共为您找到128辆车"
+            android:layout_width="145dp"
+            android:layout_height="30dp" />
+
+
+        <com.rch.custom.LoadingView
+        android:id="@+id/load_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.rch.custom.LoadingView>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

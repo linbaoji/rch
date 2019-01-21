@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@android:color/white"
+        >
+        <ImageView
+            android:paddingRight="15dp"
+            android:id="@+id/serach_car_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:src="@mipmap/back"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="找车服务"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black_1"/>
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="117dp"
+                android:src="@mipmap/zc_icon"
+                android:scaleType="fitXY"
+                />
+
+            <!--找车服务条件模板-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+                <!--预购车辆-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:gravity="center_vertical"
+                    android:background="@android:color/white"
+                    >
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="预购车辆"
+                        android:textColor="@color/black_1"
+                        android:gravity="center_vertical"
+                        android:textSize="15sp"
+                        android:paddingLeft="15dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/serach_car_brand"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:text="请选择品牌"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/gray_3"
+                        android:textSize="14sp"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/right_arrow_icon"
+                        android:layout_marginRight="15dp"
+                        />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray"
+                    />
+
+                <!--车龄-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:gravity="center_vertical"
+                    android:background="@android:color/white"
+                    >
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="车龄"
+                        android:textColor="@color/black_1"
+                        android:gravity="center_vertical"
+                        android:textSize="15sp"
+                        android:paddingLeft="15dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/serach_car_age"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:text="请选择车龄"
+                        android:textColor="@color/gray_3"
+                        android:gravity="center_vertical"
+                        android:textSize="14sp"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/right_arrow_icon"
+                        android:layout_marginRight="15dp"
+                        />
+
+                </LinearLayout>
+                <FrameLayout
+                    android:id="@+id/fl_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray"
+                    />
+
+                <!--预算价格-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:gravity="center_vertical"
+                    android:background="@android:color/white"
+                    >
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="预算价格"
+                        android:textColor="@color/black_1"
+                        android:gravity="center_vertical"
+                        android:textSize="15sp"
+                        android:paddingLeft="15dp"
+                        />
+
+                    <EditText
+                        android:inputType="numberDecimal"
+                        android:id="@+id/serach_car_price"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:maxLength="9"
+                        android:singleLine="true"
+                        android:background="@null"
+                        android:hint="请输入预算价格"
+                        android:textSize="14sp"
+                        android:textColor="@color/black_2"
+                        />
+
+                    <!--android:digits="0123456789."-->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="万元"
+                        android:textSize="14sp"
+                        android:textColor="@color/black_2"
+                        android:layout_marginRight="15dp"
+                        />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray"
+                    />
+
+                <!--需求补充-->
+                <LinearLayout
+                    android:minHeight="44dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:background="@android:color/white"
+                    >
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="需求补充"
+                        android:textColor="@color/black_1"
+                        android:gravity="center_vertical"
+                        android:textSize="15sp"
+                        android:paddingLeft="15dp"
+                        />
+
+                    <EditText
+                        android:minHeight="44dp"
+                        android:id="@+id/serach_car_remark"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:maxLength="200"
+                        android:background="@null"
+                        android:hint="请输入其他详细需求"
+                        android:textSize="14sp"
+                        android:textColor="@color/black_2"
+                        />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray"
+                    />
+
+                <!--提交订单按钮-->
+                <TextView
+                    android:id="@+id/serach_car_submit"
+                    android:layout_width="280dp"
+                    android:layout_height="40dp"
+                    android:text="提交订单"
+                    android:textColor="@android:color/white"
+                    android:background="@color/gray_3"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="30dp"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:background="@color/gray"
+                />
+
+            <!--找车流程-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                >
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="15dp"
+                    android:background="@color/orange_2"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="找车流程"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/black_1"
+                    />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="17.5dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center">
+
+
+                <!--短线-->
+                <ImageView
+                    android:id="@+id/sx_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/search_car_sx"
+                    android:layout_alignTop="@+id/lc_1"
+                    android:layout_alignLeft="@+id/lc_1"
+                    android:layout_alignRight="@+id/lc_1"
+                    android:layout_marginTop="40dp"
+                    android:visibility="invisible"
+                    />
+
+                <!--长线-->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/search_car_sx"
+                    android:layout_alignTop="@+id/lc_1"
+                    android:layout_alignLeft="@+id/lc_1"
+                    android:layout_alignRight="@+id/lc_1"
+                    android:layout_alignBottom="@+id/lc_2"
+                    android:layout_marginTop="40dp"
+                    />
+
+                <!--流程1-->
+                <ImageView
+                    android:id="@+id/lc_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/bg_1"
+                    android:layout_alignTop="@+id/bg_1"
+                    android:layout_alignBottom="@+id/bg_1"
+                    android:layout_centerVertical="true"
+                    />
+
+                <!--第一步-->
+                <LinearLayout
+                    android:id="@+id/bg_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/search_car_bg"
+                    android:layout_toRightOf="@+id/lc_1"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="第一步"
+                        android:textSize="14sp"
+                        android:textColor="@color/black_1"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="填写找车需求"
+                        android:textSize="12sp"
+                        android:textColor="@color/gray_13"
+                        android:layout_marginTop="8dp"
+                        />
+
+                </LinearLayout>
+                <!--长线-->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/search_car_sx"
+                    android:layout_alignTop="@+id/lc_2"
+                    android:layout_alignLeft="@+id/lc_2"
+                    android:layout_alignRight="@+id/lc_2"
+                    android:layout_alignBottom="@+id/lc_3"
+                    android:layout_marginTop="40dp"
+                    />
+                <!--短线-->
+                <ImageView
+                    android:id="@+id/sx_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/search_car_sx"
+                    android:layout_alignTop="@+id/lc_2"
+                    android:layout_alignLeft="@+id/lc_2"
+                    android:layout_alignRight="@+id/lc_2"
+                    android:layout_marginTop="40dp"
+                    android:visibility="invisible"
+                    />
+                <!--流程2-->
+                <ImageView
+                    android:id="@+id/lc_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/bg_2"
+                    android:layout_below="@+id/sx_1"
+                    android:layout_alignTop="@+id/bg_2"
+                    android:layout_alignBottom="@+id/bg_2"
+                    android:layout_centerVertical="true"
+                    />
+                <!--第二步-->
+                <LinearLayout
+                    android:id="@+id/bg_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/search_car_bg"
+                    android:layout_toRightOf="@+id/lc_2"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/sx_1"
+                    android:paddingLeft="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="第二步"
+                        android:textSize="14sp"
+                        android:textColor="@color/black_1"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="客服审核信息"
+                        android:textSize="12sp"
+                        android:textColor="@color/gray_13"
+                        android:layout_marginTop="8dp"
+                        />
+
+                </LinearLayout>
+
+                <!--长线-->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/search_car_sx"
+                    android:layout_alignTop="@+id/lc_3"
+                    android:layout_alignLeft="@+id/lc_3"
+                    android:layout_alignRight="@+id/lc_3"
+                    android:layout_alignBottom="@+id/lc_4"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="40dp"
+                    />
+                <!--短线-->
+                <ImageView
+                    android:id="@+id/sx_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/search_car_sx"
+                    android:layout_alignTop="@+id/lc_3"
+                    android:layout_alignLeft="@+id/lc_3"
+                    android:layout_alignRight="@+id/lc_3"
+                    android:layout_marginTop="40dp"
+                    android:visibility="invisible"
+                    />
+                <!--流程3-->
+                <ImageView
+                    android:id="@+id/lc_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/bg_3"
+                    android:layout_below="@+id/sx_2"
+                    android:layout_alignTop="@+id/bg_3"
+                    android:layout_alignBottom="@+id/bg_3"
+                    android:layout_centerVertical="true"
+                    />
+                <!--第三步-->
+                <LinearLayout
+                    android:id="@+id/bg_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/search_car_bg"
+                    android:layout_toRightOf="@+id/lc_3"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/sx_2"
+                    android:paddingLeft="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="第三步"
+                        android:textSize="14sp"
+                        android:textColor="@color/black_1"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="信息审核的一周内，客服将向你推荐车辆信息"
+                        android:textSize="12sp"
+                        android:textColor="@color/gray_13"
+                        android:layout_marginTop="8dp"
+                        />
+
+                </LinearLayout>
+
+                <!--流程4-->
+                <ImageView
+                    android:id="@+id/lc_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/bg_4"
+                    android:layout_below="@+id/sx_3"
+                    android:layout_alignTop="@+id/bg_4"
+                    android:layout_alignBottom="@+id/bg_4"
+                    android:layout_centerVertical="true"
+                    />
+                <!--第四步-->
+                <LinearLayout
+                    android:id="@+id/bg_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/search_car_bg"
+                    android:layout_toRightOf="@+id/lc_4"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/sx_3"
+                    android:paddingLeft="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="第四步"
+                        android:textSize="14sp"
+                        android:textColor="@color/black_1"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="对客服做出评价，完成服务"
+                        android:textSize="12sp"
+                        android:textColor="@color/gray_13"
+                        android:layout_marginTop="8dp"
+                        />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

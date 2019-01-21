@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:id="@+id/new_car_module"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp">
+
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@mipmap/xinche" />
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="新车"
+                android:textColor="@color/new_car_green"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="新车/平行进口车"
+                android:textColor="@color/gray_3"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/old_car_module"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@mipmap/ershouche"
+            />
+
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="高端二手车"
+                android:textColor="@color/old_car_orange"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="豪车/二手精品车"
+                android:textColor="@color/gray_3"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+</LinearLayout>
+</LinearLayout>

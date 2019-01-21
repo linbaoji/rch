@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:background="@color/gray_2"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize">
+
+        <ImageView
+            android:id="@+id/iv_finsh"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="我卖的车"
+            android:textColor="@color/black_1"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_bmc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="15dp">
+
+            <TextView
+                android:id="@+id/tv_bmc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="帮卖的车"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/view_bmc"
+                android:layout_width="30dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/orange_4"></View>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_wmc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="15dp">
+
+            <TextView
+                android:id="@+id/tv_wmc"
+                android:textColor="@color/black_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我卖的车"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/view_wmc"
+                android:layout_width="30dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/orange_4"></View>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+    <FrameLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/fr_mian"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+
+
+</LinearLayout>

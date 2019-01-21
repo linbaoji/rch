@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:minHeight="110dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:textColor="@color/gray_3"
+                android:textSize="12sp"
+                android:layout_weight="1"
+                android:text="提交日期：2017.11.12 12:20"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_state"
+                android:layout_width="55dp"
+                android:layout_height="18dp"
+                android:background="@drawable/gray_bg_radio"
+                android:gravity="center"
+                android:text="已处理"
+                android:textColor="@color/gray_19"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_fk"
+            android:layout_marginTop="15dp"
+            android:paddingBottom="5dp"
+            android:text="反馈问题：【新车问题】问题内容×××××××预约时间段内预约时间段内预约时间段内分，反过来作用于系统本身，从而影响系统的输出"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_height="10dp"
+        style="@style/view_line"></View>
+
+
+
+</LinearLayout>

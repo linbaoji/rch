@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "F:\\mygithub\\rch\\library\\build\\intermediates\\res\\merged\\release\\drawable\\indicator_bg_top.xml",
+        "source": "F:\\mygithub\\rch\\library\\src\\main\\res\\drawable\\indicator_bg_top.xml"
+    },
+    {
+        "merged": "F:\\mygithub\\rch\\library\\build\\intermediates\\res\\merged\\release\\drawable\\indicator_bg_bottom.xml",
+        "source": "F:\\mygithub\\rch\\library\\src\\main\\res\\drawable\\indicator_bg_bottom.xml"
+    }
+]

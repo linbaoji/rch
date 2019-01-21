@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@android:color/white"
+        >
+        <ImageView
+            android:id="@+id/perfect_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:src="@mipmap/back"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="完善信息"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black_1"/>
+
+    </RelativeLayout>
+
+    <!--描点-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        >
+
+        <!--绿色按钮-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="53dp"
+            android:layout_marginRight="53dp"
+            android:layout_marginTop="23dp"
+            android:gravity="center_vertical"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/circle_one_sel_icon"
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1.0"
+                android:layout_height="2dp"
+                android:background="@color/line_blue"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/circle_two_sel_icon"
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1.0"
+                android:layout_height="2dp"
+                android:background="@color/gray_3"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/circle_three_no_sel_icon"
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1.0"
+                android:layout_height="2dp"
+                android:background="@color/gray_3"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/circle_four_no_sel_icon"
+                />
+
+        </LinearLayout>
+
+        <!--文字描述-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="我要卖车"
+                android:textSize="14sp"
+                android:textColor="@color/black_2"
+                />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="车辆信息"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textColor="@color/black_2"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="发布信息"
+                android:gravity="right"
+                android:textSize="14sp"
+                android:textColor="@color/gray_3"
+                />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="完成"
+                android:textSize="14sp"
+                android:paddingRight="10dp"
+                android:gravity="end"
+                android:textColor="@color/gray_3"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/gray"/>
+
+        <!--品牌车型-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="品牌车型"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/black_1"
+                />
+
+            <TextView
+                android:id="@+id/perfect_brand"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:text="请选择品牌"
+                android:gravity="center_vertical"
+                android:textColor="@color/gray_3"
+                android:layout_marginLeft="20dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/right_arrow"
+                android:layout_marginRight="15dp"
+                />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"/>
+
+        <!--上牌地区-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="上牌地区"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/black_1"
+                />
+
+            <TextView
+                android:id="@+id/perfect_area"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:text="请选择"
+                android:gravity="center_vertical"
+                android:textColor="@color/gray_3"
+                android:layout_marginLeft="20dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/right_arrow"
+                android:layout_marginRight="15dp"
+                />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"/>
+
+        <!--首次上牌时间-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="首次上牌时间"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/black_1"
+                />
+
+            <TextView
+                android:id="@+id/perfect_time"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:text="请选择"
+                android:gravity="center_vertical"
+                android:textColor="@color/gray_3"
+                android:layout_marginLeft="20dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/right_arrow"
+                android:layout_marginRight="15dp"
+                />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"/>
+
+        <!--表显里程-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="表显里程"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/black_1"
+                />
+
+            <EditText
+                android:id="@+id/perfect_mileage"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:hint="可支持两位小数"
+                android:gravity="center_vertical"
+                android:textColor="@color/gray_3"
+                android:layout_marginLeft="20dp"
+                android:maxLength="10"
+                android:textSize="14sp"
+                android:background="@null"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="万公里"
+                android:layout_marginRight="15dp"
+                android:textColor="@color/black_1"
+                />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"/>
+
+
+        <TextView
+            android:id="@+id/fast_sell_car_btn"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:text="下一步"
+            android:background="@drawable/button"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="55dp"
+            android:layout_marginBottom="105dp"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

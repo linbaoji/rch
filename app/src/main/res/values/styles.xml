@@ -1,0 +1,315 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="LoadingDialogStyle" parent="Base.Theme.AppCompat.Light.Dialog">
+        <item name="android:windowIsFloating">true</item>是否浮现在activity之上
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>   设置Activity出现方式
+        <item name="android:windowBackground">@android:color/transparent</item> 设置dialog的背景，此处为系统给定的透明值
+        <item name="android:windowFrame">@null</item>      Dialog的windowFrame框为无
+        <item name="android:windowIsTranslucent">true</item>   是否半透明
+        <item name="android:windowContentOverlay">@null</item>  是否有覆盖
+        <item name="android:backgroundDimEnabled">true</item>        背景是否模糊显示
+    </style>
+
+    <!-- 自定义popupWindow_WorkingAge -->
+    <style name="AnimBottom" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/popupwindow_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/popupwindow_exit_anim</item>
+    </style>
+
+    <!-- 买车通用样式 -->
+    <style name="ll_soldcar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="tv_soldcar">
+        <item name="android:textColor">@color/gray_13</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <!-- 自定义仿IOS的ActionSheet底部Dialog的样式 ，有模糊效果 -->
+    <style name="ActionSheetDialogStyle" parent="@android:style/Theme.Dialog">
+
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 浮于Activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog以外的区域模糊效果 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- Dialog进入及退出动画 -->
+        <item name="android:windowAnimationStyle">@style/ActionSheetDialogAnimation</item>
+    </style>
+
+
+    <!-- ActionSheet进出动画 -->
+    <style name="ActionSheetDialogAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/my_self_dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/my_self_dialog_out</item>
+    </style>
+
+    <!-- 自定义仿IOS的AlertDialog的样式 -->
+    <style name="AlertDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+    </style>
+
+    <!-- 我的fragment中公用的text顶部imageview -->
+    <style name="myfra_ivtext">
+    <item name="android:paddingBottom">18dp</item>
+        <item name="android:paddingTop">18dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/black_1</item>
+        <item name="android:drawablePadding">10dp</item>
+    </style>
+
+    <!--<item name="android:layout_weight">1</item>-->
+
+    <style name="view_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1sp</item>
+        <item name="android:background">#f5f5f5</item>
+    </style>
+
+    <style name="ll_fb">
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+    </style>
+
+    <style name="tv_red_xin">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/red_x</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">*</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="et_fb">
+    <item name="android:textColor">@color/black_1</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="iv_fb_right">
+        <item name="android:src">@mipmap/right_arrow</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!-- Add by fycus_peng -->
+    <style name="RightInRightOutAnim" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+        <!--<item name="android:activityCloseEnterAnimation">@anim/slide_in_left</item>-->
+
+        <!--<item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>-->
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
+    </style>
+
+    <style name="Animation_RightInRightOutActivity" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowAnimationStyle">@style/RightInRightOutAnim</item><!--动画-->
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 浮于Activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog以外的区域模糊效果 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+
+    </style>
+
+    <style name="ll_addphoto">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingTop">20dp</item>
+
+    </style>
+
+    <style name="ll_additem">
+
+        <item name="android:layout_width">107dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/gray_brown</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+
+
+    </style>
+
+    <style name="iv_deleat">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:src">@mipmap/red_delet</item>
+
+
+
+    </style>
+
+    <style name="ll_jd">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+
+    <style name="text_f_u">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black_2</item>
+    </style>
+    <style name="text_top">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black_1</item>
+    </style>
+    <style name="text_top_un_bold">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/black_1</item>
+    </style>
+    <style name="text_bold_title">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black_1</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+    <style name="text_below">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/gray_3</item>
+    </style>
+    <style name="home_financial_style">
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/financial_color</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:background">@drawable/financial_bg</item>
+    </style>
+
+    <style name="car_type_style">
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+    </style>
+    <style name="car_status_style">
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+    </style>
+    <style name="tv_order">
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:textColor">@color/black_2</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!--默认样式-->
+    <style name="picture.default.style" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <!--标题栏背景色-->
+        <item name="colorPrimary">@color/orange_2</item>
+        <!--状态栏背景色-->
+        <item name="colorPrimaryDark">@color/orange_2</item>
+        <!--是否改变图片列表界面状态栏字体颜色为黑色-->
+        <item name="picture.statusFontColor">false</item>
+        <!--返回键图标-->
+        <item name="picture.leftBack.icon">@mipmap/back_white</item>
+        <!--标题下拉箭头-->
+        <item name="picture.arrow_down.icon">@mipmap/down_arrow</item>
+        <!--标题上拉箭头-->
+        <item name="picture.arrow_up.icon">@mipmap/up_arrow</item>
+        <!--标题文字颜色-->
+        <item name="picture.title.textColor">@color/white</item>
+        <!--标题栏右边文字-->
+        <item name="picture.right.textColor">@color/white</item>
+        <!--图片列表勾选样式-->
+        <item name="picture.checked.style">@drawable/picture_checkbox_selector</item>
+        <!--开启图片列表勾选数字模式-->
+        <item name="picture.style.checkNumMode">false</item>
+        <!--选择图片样式0/9-->
+        <item name="picture.style.numComplete">false</item>
+        <!--图片列表底部背景色-->
+        <item name="picture.bottom.bg">@color/orange_2</item>
+        <!--图片列表预览文字颜色-->
+        <item name="picture.preview.textColor">@color/white</item>
+        <!--图片列表已完成文字颜色-->
+        <item name="picture.complete.textColor">@color/white</item>
+        <!--图片已选数量圆点背景色-->
+        <item name="picture.num.style">@drawable/num_oval</item>
+        <!--预览界面标题文字颜色-->
+        <item name="picture.ac_preview.title.textColor">@color/white</item>
+        <!--预览界面已完成文字颜色-->
+        <item name="picture.ac_preview.complete.textColor">@color/white</item>
+        <!--预览界面标题栏背景色-->
+        <item name="picture.ac_preview.title.bg">@color/orange_2</item>
+        <!--预览界面底部背景色-->
+        <item name="picture.ac_preview.bottom.bg">@color/orange_2</item>
+        <!--预览界面返回箭头-->
+        <item name="picture.preview.leftBack.icon">@drawable/picture_back</item>
+        <!--裁剪页面标题背景色-->
+        <item name="picture.crop.toolbar.bg">@color/orange_2</item>
+        <!--裁剪页面状态栏颜色-->
+        <item name="picture.crop.status.color">@color/orange_2</item>
+        <!--裁剪页面标题文字颜色-->
+        <item name="picture.crop.title.color">@color/white</item>
+        <!--相册文件夹列表选中图标-->
+        <item name="picture.folder_checked_dot">@drawable/orange_oval</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+</resources>

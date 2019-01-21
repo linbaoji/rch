@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <com.rch.custom.CommonView
+        android:id="@+id/cv_car_dealer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:desText="上海捷利行汽车销售服务有限公司"
+        app:desTextSize="16sp"
+        app:isShowArraw="true"
+        app:isShowCategoryImage="false"/>
+
+    <View style="@style/view_line"/>
+</LinearLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:contentInsetStart="0dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleMarginStart="0dp"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@android:color/white"
+        >
+        <ImageView
+            android:visibility="gone"
+            android:paddingRight="15dp"
+            android:id="@+id/iv_finsh"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:src="@mipmap/back"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提交成功"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black_1"/>
+
+    </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/tj_icon"
+            android:layout_marginTop="30dp"
+            />
+
+        <TextView
+            android:id="@+id/content_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提交成功,审核中"
+            android:textSize="18sp"
+            android:textColor="@color/black_1"
+            android:layout_marginTop="20dp"
+            />
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="客服将于"
+                android:textColor="@color/gray_3" />
+
+            <TextView
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2个工作日内"
+                android:textColor="@color/btn_pre_color" />
+
+            <TextView
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="与您联系，请保持电话畅通。"
+                android:textColor="@color/gray_3" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv_gogl"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:text=""
+                android:textColor="@color/orange_2"
+                android:background="@drawable/publish_type"
+                android:textSize="16sp"
+                android:gravity="center"
+                />
+
+
+
+            <!--继续逛逛-->
+            <TextView
+                android:visibility="gone"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:id="@+id/tv_continu"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:text="继续发布车辆"
+                android:textColor="@android:color/white"
+                android:background="@drawable/button"
+                android:textSize="16sp"
+                android:gravity="center"
+                />
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

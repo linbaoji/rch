@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@android:color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentInsetStart="0dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleMarginStart="0dp"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        >
+        <ImageView
+            android:id="@+id/code_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:src="@mipmap/back"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提交验证"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black_1"/>
+
+    </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="验证码已发送到手机："
+            android:textColor="@color/gray_1"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/code_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/black_1"
+            android:textSize="18sp"
+            />
+
+    </LinearLayout>
+
+    <!-- app:vcv_et_bg="@drawable/et_login_code"-->
+    <com.rch.custom.VerificationCodeView
+        android:id="@+id/code_verification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:vcv_et_bg="@drawable/et_focused"
+        app:vcv_et_cursor="@drawable/et_cursor"
+        app:vcv_et_inputType="number"
+        app:vcv_et_number="6"
+        app:vcv_et_width="40dp"
+        app:vcv_et_text_color="@color/orange_2"
+        app:vcv_et_text_size="6sp" />
+
+
+    <TextView
+        android:id="@+id/code_ok"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="验证"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/send_code_color_status"
+        android:textColor="@android:color/white"
+        />
+
+    <TextView
+        android:id="@+id/code_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="获取验证码"
+        android:textColor="@color/gray_1"
+        android:textSize="12sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="13dp"
+        />
+
+</LinearLayout>

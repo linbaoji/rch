@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentInsetStart="0dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleMarginStart="0dp"
+        >
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="VIN码"
+            android:textColor="@color/black_1"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_bc"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="保存"
+            android:textColor="@color/tv_12"
+            android:textSize="16sp" />
+    </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <View
+        android:layout_height="10dp"
+        style="@style/view_line"></View>
+
+    <LinearLayout style="@style/ll_fb">
+
+        <TextView
+            style="@style/tv_red_xin"
+            android:visibility="gone" />
+
+        <TextView
+            style="@style/tv_red_xin"
+            android:text="VIN码"
+            android:textColor="@color/black_1" />
+
+        <EditText
+            android:id="@+id/et_vin"
+            android:paddingLeft="10dp"
+            style="@style/et_fb"
+            android:enabled="true"
+            android:digits="@string/vin_code"
+            android:maxLength="17"
+            android:hint="请输入" />
+
+        <ImageView
+            android:visibility="gone"
+            style="@style/iv_fb_right" />
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_height="10dp"
+        style="@style/view_line"></View>
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:textColor="@color/btn_org2"
+        android:textSize="12sp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:text="通过VIN码验证车况，获取4S保养记录标识，车辆更靠谱，出售效率更高。"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:textColor="@color/black_1"
+        android:textSize="16sp"
+        android:text="VIN码是什么"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:paddingRight="20dp"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black_1"
+        android:textSize="14sp"
+        android:text="《中华人民共和国机动车行驶证》中可以找到车辆识别代号VIN；另外车辆铭牌上页可以找到车辆识别代号VIN。"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_marginTop="35dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/vin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+</LinearLayout>

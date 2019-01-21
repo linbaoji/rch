@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/ll_order_item"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+        <TextView
+            android:layout_centerVertical="true"
+            android:id="@+id/tv_name"
+            android:paddingLeft="15dp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="张三"/>
+        <TextView
+            android:paddingLeft="5dp"
+            android:layout_toRightOf="@+id/tv_name"
+            android:layout_centerVertical="true"
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="2018-12-12  14:00:00"/>
+        <TextView
+            android:id="@+id/tv_car_status"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tv_car_deal_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/car_status_style"
+            android:background="@drawable/green_white_bg"
+            android:textColor="@color/green_bg"
+            android:textSize="12sp"
+            android:text="新车"/>
+        <TextView
+            android:layout_marginLeft="12dp"
+            android:id="@+id/tv_car_deal_status"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已看车"/>
+    </RelativeLayout>
+    <View style="@style/view_line"/>
+    <LinearLayout
+        android:paddingRight="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/tv_order"
+            android:text="预约车辆:"/>
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/gray_6"
+            android:id="@+id/tv_car_name"
+            style="@style/tv_order"
+            android:text=""/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/tv_order"
+            android:text="所属车商:" />
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/gray_6"
+            android:id="@+id/tv_car_manage"
+            style="@style/tv_order"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/tv_order"
+            android:text="预约看车日期:" />
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/gray_6"
+            android:id="@+id/tv_car_date"
+            style="@style/tv_order"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/tv_order"
+            android:text="分享人:" />
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/gray_6"
+            android:id="@+id/tv_car_share_name"
+            style="@style/tv_order"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_car_cancel"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/tv_order"
+            android:text="取消原因:" />
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/gray_6"
+            android:id="@+id/tv_car_cancel"
+            style="@style/tv_order"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_car_refuse"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/tv_order"
+            android:text="驳回原因:" />
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/gray_6"
+            android:id="@+id/tv_car_refuse"
+            style="@style/tv_order"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_car_look_date"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/tv_order"
+            android:text="实际看车日期:" />
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:id="@+id/tv_car_look_date"
+            style="@style/tv_order"
+            android:textColor="@color/gray_6"
+            android:text="1" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+    <View style="@style/view_line"/>
+    <LinearLayout
+        android:id="@+id/ll_bottom_cus"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_cus_status_look"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            style="@style/tv_order"
+            android:layout_height="match_parent"
+            android:text="客户已看车"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            style="@style/view_line"/>
+        <TextView
+            android:id="@+id/tv_cus_status_cancel"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            style="@style/tv_order"
+            android:text="客户取消"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        style="@style/view_line"/>
+</LinearLayout>

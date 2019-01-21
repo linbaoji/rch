@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "F:\\mygithub\\rch\\library\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\default_ptr_flip.png",
+        "source": "F:\\mygithub\\rch\\library\\src\\main\\res\\drawable-xhdpi\\default_ptr_flip.png"
+    },
+    {
+        "merged": "F:\\mygithub\\rch\\library\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\default_ptr_rotate.png",
+        "source": "F:\\mygithub\\rch\\library\\src\\main\\res\\drawable-xhdpi\\default_ptr_rotate.png"
+    },
+    {
+        "merged": "F:\\mygithub\\rch\\library\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\indicator_arrow.png",
+        "source": "F:\\mygithub\\rch\\library\\src\\main\\res\\drawable-xhdpi\\indicator_arrow.png"
+    }
+]

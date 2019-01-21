@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_login"
+        android:layout_width="match_parent"
+        android:layout_height="280dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_marginBottom="1dp"
+            android:background="@mipmap/mylogin">
+
+
+            <ImageView
+                android:id="@+id/iv_qd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/iv_set"
+                android:padding="15dp"
+                android:src="@mipmap/myqd" />
+
+
+            <ImageView
+                android:visibility="invisible"
+                android:id="@+id/iv_set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="15dp"
+                android:src="@mipmap/myset" />
+
+
+            <!--登陆布局-->
+            <LinearLayout
+                android:id="@+id/ll_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_set"
+                android:layout_marginTop="30dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <ImageView
+                    android:id="@+id/iv_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/use_person" />
+
+
+                <!--登陆布局-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_undl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="车行名称/个人姓名"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/tv_rz"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@mipmap/noscer" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ll_undl"
+                        android:layout_marginTop="10dp"
+                        android:text="188***6666"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+                <!--<ImageView-->
+                <!--android:id="@+id/iv_arrow"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:src="@mipmap/right_arrow" />-->
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_fb"
+            android:background="@mipmap/myfb"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="125dp">
+
+
+            <LinearLayout
+                android:id="@+id/ll_num"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="75dp">
+
+                <LinearLayout
+                    android:paddingTop="11dp"
+                    android:paddingBottom="11dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="@color/black_1"
+                        android:textSize="21sp"
+                        android:id="@+id/tv_sz"
+                        android:text="60"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:textColor="@color/gray_13"
+                        android:textSize="12sp"
+                        android:layout_marginTop="5dp"
+                        android:text="在售中"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="11dp"
+                    android:paddingBottom="11dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="@color/black_1"
+                        android:textSize="21sp"
+                        android:id="@+id/tv_ysj"
+                        android:text="60"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:textSize="12sp"
+                        android:textColor="@color/gray_13"
+                        android:layout_marginTop="5dp"
+                        android:text="已售罄"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:paddingTop="11dp"
+                    android:paddingBottom="11dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="@color/black_1"
+                        android:textSize="21sp"
+                        android:id="@+id/tv_yxj"
+                        android:text="60"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:textSize="12sp"
+                        android:textColor="@color/gray_13"
+                        android:layout_marginTop="5dp"
+                        android:text="已下架"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_fb"
+                android:padding="5dp"
+                android:textColor="@color/black_1"
+                android:textSize="13sp"
+                android:layout_below="@+id/ll_num"
+                android:layout_centerHorizontal="true"
+                android:text="去发布车辆>"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

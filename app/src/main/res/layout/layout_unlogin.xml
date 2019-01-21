@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@mipmap/my_bg"
+    android:layout_height="192dp">
+    <View
+        android:id="@+id/view_top"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="#F2782E"/>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F2782E"
+        app:contentInsetStart="0dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleMarginStart="0dp"
+        >
+            <TextView
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:text="我的"
+                android:layout_width="match_parent"
+                android:layout_height="45dp" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/iv_sqd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/iv_nologinset"
+            android:padding="15dp"
+            android:src="@mipmap/myqd" />
+
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/iv_nologinset"
+            android:layout_alignParentRight="true"
+            android:padding="15dp"
+            android:src="@mipmap/myset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:visibility="gone"
+            android:layout_marginTop="37dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:text="我的"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <!--登陆布局-->
+
+        <LinearLayout
+            android:layout_margin="15dp"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/ll_unlogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           >
+
+            <RelativeLayout
+                android:background="@drawable/white_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="25dp"
+                    android:paddingBottom="25dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/iv_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/img_boy" />
+
+
+                <!--登陆布局-->
+                <RelativeLayout
+                    android:paddingRight="15dp"
+                    android:paddingTop="25dp"
+                    android:paddingBottom="25dp"
+                    android:id="@+id/rl_login"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/iv_sex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:paddingRight="10dp"
+                        android:gravity="bottom"
+                        android:id="@+id/ll_undl"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:maxWidth="150dp"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:id="@+id/tv_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="注册/登录"
+                            android:textColor="@color/black_2"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:visibility="gone"
+                            android:id="@+id/my_fragment_authen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:background="@mipmap/noscer" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="bottom"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/ll_undl"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="马上登录,体验U买车完整功能"
+                            android:textColor="@color/gray_3"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_rcglr"
+                            android:visibility="gone"
+                            android:paddingBottom="2dp"
+                            android:paddingTop="2dp"
+                            android:paddingRight="5dp"
+                            android:paddingLeft="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/white_bg_radiu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="日常管理人"
+                            android:textColor="@color/btn_org2"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/iv_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/youjiantou" />
+
+                </RelativeLayout>
+
+                <!--<ImageView-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_toRightOf="@+id/rl_login"-->
+                    <!--android:id="@+id/iv_arrow"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:src="@mipmap/youjiantou" />-->
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/iv_identify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/identity"/>
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

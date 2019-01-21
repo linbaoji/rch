@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:minHeight="90dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:background="@color/white"
+            android:padding="15dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_person"
+                    android:src="@mipmap/img_boy"
+                    android:layout_width="37dp"
+                    android:layout_height="37dp" />
+
+                <LinearLayout
+                    android:layout_marginLeft="15dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_phone"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textColor="@color/black_1"
+                        android:textSize="14sp"
+                        android:text="188****8888"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_marginTop="10dp"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textColor="@color/gray_3"
+                        android:textSize="10sp"
+                        android:text="3分钟"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_call"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@mipmap/ckdh"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp" />
+
+                    <TextView
+                        android:layout_marginLeft="8dp"
+                        android:textColor="@color/orange_18"
+                        android:textSize="12sp"
+                        android:text="查看电话"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_marginTop="12dp"
+                style="@style/view_line"></View>
+
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_marginTop="15dp"
+                android:text="中规路特斯Exige S，3.5T机械增压发动机，351匹马力，400N，0-100加速时间3.9秒，6速手自一体变速箱，中置发动机，前17寸轮毂，后17轮、倒车雷达、指导价82万  包牌落地价只需：70多万 ，秒杀宝马M4，超级操控"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_height="10dp"
+            style="@style/view_line"></View>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:contentInsetStart="0dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleMarginStart="0dp"
+        android:minHeight="?attr/actionBarSize"
+        >
+
+    <TextView
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:text="工作台"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textColor="@color/black_1"/>
+    </android.support.v7.widget.Toolbar>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_new_car_manage"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/xincheguanli"/>
+
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/text_top_un_bold"
+                android:text="新车管理"/>
+        </LinearLayout>
+        <View style="@style/view_line"/>
+        <LinearLayout
+            android:id="@+id/ll_old_car_manage"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ershoucheg"/>
+
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/text_top_un_bold"
+                android:text="二手车管理"/>
+        </LinearLayout>
+        <View style="@style/view_line"/>
+        <LinearLayout
+            android:id="@+id/ll_member_manage"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/yuangongg"/>
+
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/text_top_un_bold"
+                android:text="员工管理"/>
+        </LinearLayout>
+        <View style="@style/view_line"/>
+    </LinearLayout>
+    <View
+        android:id="@+id/view_cus"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+    <LinearLayout
+        android:id="@+id/ll_customer_manage"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/kehuguan"/>
+
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/text_top_un_bold"
+            android:text="客户管理"/>
+    </LinearLayout>
+    <View style="@style/view_line"/>
+</LinearLayout>

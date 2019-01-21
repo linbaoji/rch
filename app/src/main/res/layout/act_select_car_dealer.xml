@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ptr="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_layout_top"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.handmark.pulltorefresh.library.PullToRefreshRecyclerView
+            android:id="@+id/plv_yg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="fill"
+            ptr:ptrMode="both" />
+
+        <com.rch.custom.LoadingView
+            android:id="@+id/ld_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+</LinearLayout>

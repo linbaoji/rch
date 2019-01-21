@@ -1,0 +1,144 @@
+apply plugin: 'com.android.application'
+apply plugin: 'newlens'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'rch'
+            keyPassword 'rch0514'
+            storeFile file('E:/AndroidProjcet/rch/rch.jks')
+            storePassword 'rch0514'
+        }
+    }
+    compileSdkVersion 25
+    buildToolsVersion "26.0.2"
+    defaultConfig {
+        applicationId "com.rch"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 8
+        versionName "1.2.5"
+        testInstrumentationRunner "android.support.send_code_color_status.runner.AndroidJUnitRunner"
+
+
+
+        //版本名后面添加一句话，意思就是flavor dimension 它的维度就是该版本号，这样维度就是都是统一的了---
+        // ---------------------        一定要配置这个
+        flavorDimensions "versionCode"
+        multiDexEnabled true
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    //添加如下配置就ok了
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    repositories {
+        maven {
+            url "https://jitpack.io"
+        }
+    }
+    allprojects {
+        repositories {
+            mavenCentral()
+        }
+    }
+    configurations.all {
+        resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+            def requested = details.requested
+            if (requested.group == 'com.android.support') {
+                if (!requested.name.startsWith("multidex")) {
+                    details.useVersion '25.3.0'
+                }
+            }
+        }
+    }
+}
+
+
+dependencies {
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.1', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.android.support:appcompat-v7:25.3.0'
+    implementation 'com.android.support:recyclerview-v7:25.3.0'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation files('libs/universal-image-loader-1.9.1.jar')
+//    implementation 'com.github.bumptech.glide:glide:3.7.0'
+//    compile 'com.contrarywind:Android-PickerView:3.2.7'
+    compile 'com.google.code.gson:gson:2.7'
+    implementation project(':library')
+    implementation project(':pickerview')
+    implementation files('libs/AMap_Location_V3.8.0_20180201.jar')
+    /*Umeng*/
+    /* compile 'com.umeng.sdk:shareboard-widget:latest.integration'*/
+    /*compile 'com.umeng.sdk:share-core:latest.integration'*/
+    /*compile 'com.umeng.sdk:share-qq:6.9.1.1'*/
+    /*compile 'com.umeng.sdk:share-wechat:latest.integration'*/
+    /*compile 'com.umeng.sdk:share-sina:latest.integration'*/
+    /*implementation files('libs/umeng-debug-1.0.0.jar')*/
+    /*Umeng 分享*/
+    implementation files('libs/xUtils-2.4.7.jar')
+    implementation files('libs/umeng-share-core-6.9.2.jar')
+    implementation files('libs/umeng-share-wechat-simplify-6.9.2.jar')
+    implementation files('libs/umeng-sharetool-6.9.2.jar')
+    implementation files('libs/umeng-common-1.5.3.jar')
+
+    /*   *//*Umeng 推送*/
+    //PushSDK必须依赖基础组件库，所以需要加入对应依赖
+
+//    compile 'com.umeng.sdk:common:1.5.3'
+
+//    compile 'com.umeng.sdk:common:1.5.3'
+
+    //compile 'com.umeng.sdk:common:1.5.3'
+
+    //PushSDK必须依赖utdid库，所以需要加入对应依赖
+    compile 'com.umeng.sdk:utdid:1.1.5.3'
+    //PushSDK
+    compile 'com.umeng.sdk:push:4.2.0'
+
+    /*诸葛IO*/
+    compile 'com.zhuge.analysis:zhugeio:latest.integration'
+    /*Umeng统计*/
+
+//    compile 'com.umeng.sdk:common:latest.integration'
+
+//    compile 'com.umeng.sdk:common:latest.integration'
+
+    //compile 'com.umeng.sdk:common:latest.integration'
+
+    compile 'com.umeng.sdk:analytics:latest.integration'
+    //    compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.1'
+    compile 'com.github.Cutta:GifView:1.1'
+    //compile 'com.android.support:multidex:1.0.1'
+
+//    compile 'com.yalantis:ucrop:2.2.0'
+
+
+
+
+    //小米Push通道
+    compile 'com.umeng.sdk:push-xiaomi:1.0.0'
+    //华为Push通道
+    compile 'com.umeng.sdk:push-huawei:1.0.0'
+
+    compile 'com.github.chrisbanes:PhotoView:2.0.0'
+    compile 'com.yanzhenjie:recyclerview-swipe:1.1.4'
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.3'
+
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.android.support:design:25.2.1'
+    compile "com.networkbench.newlens.agent.android:nbs.newlens.agent:2.11.0"
+
+    compile 'com.hyman:flowlayout-lib:1.1.2'
+}

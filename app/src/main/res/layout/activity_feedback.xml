@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:background="@color/white"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentInsetStart="0dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleMarginStart="0dp"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        >
+        <ImageView
+            android:paddingRight="15dp"
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:src="@mipmap/back"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="意见反馈"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black_1"/>
+
+        <TextView
+            android:id="@+id/tv_myfk"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="我的反馈"
+            android:textSize="16sp"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/gray_13"/>
+
+
+
+
+    </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:padding="15dp"
+            android:textColor="@color/gray_13"
+            android:textSize="13sp"
+            android:text="请选择您想反馈的问题"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            style="@style/view_line"></View>
+
+
+
+        <RadioGroup
+            android:paddingBottom="22dp"
+            android:paddingTop="22dp"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:id="@+id/rg_check"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:textSize="15sp"
+                android:id="@+id/rb_xc"
+                android:checked="true"
+                android:background="@drawable/check_bg"
+                android:gravity="center"
+                android:button="@null"
+                android:textColor="@drawable/check_color"
+                android:text="新车问题"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="30dp" />
+            <RadioButton
+                android:textSize="15sp"
+                android:layout_marginLeft="23dp"
+                android:background="@drawable/check_bg"
+                android:textColor="@drawable/check_color"
+                android:id="@+id/rb_jc"
+                android:gravity="center"
+                android:button="@null"
+                android:text="二手车问题"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="30dp" />
+
+            <RadioButton
+                android:textSize="15sp"
+                android:background="@drawable/check_bg"
+                android:textColor="@drawable/check_color"
+                android:id="@+id/rb_qt"
+                android:gravity="center"
+                android:button="@null"
+                android:text="其他问题"
+                android:layout_marginLeft="23dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="30dp" />
+
+
+
+
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="218dp">
+
+        <TextView
+            android:padding="15dp"
+            android:textColor="@color/gray_13"
+            android:textSize="13sp"
+            android:text="请补充详细问题和建议"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            style="@style/view_line"></View>
+
+
+        <EditText
+            android:layout_marginTop="15dp"
+            android:id="@+id/et_ms"
+            android:paddingLeft="15dp"
+            android:maxLength="300"
+            android:paddingTop="10dp"
+            android:background="@android:color/white"
+            android:textSize="14sp"
+            android:gravity="top"
+            android:hint="请输入不小于10字的描述"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        
+
+    </LinearLayout>
+    
+    
+    <TextView
+        android:id="@+id/tv_tj"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:text="提交"
+        android:layout_marginRight="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+
+
+
+
+
+</LinearLayout>

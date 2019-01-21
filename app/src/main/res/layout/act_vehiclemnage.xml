@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentInsetStart="0dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleMarginStart="0dp"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        >
+        <ImageView
+            android:paddingRight="15dp"
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:src="@mipmap/back"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="车辆管理"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black_1"/>
+
+    </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_dsj"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="15dp">
+
+            <TextView
+                android:id="@+id/tv_dsj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="待上架"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/view_dsj"
+                android:layout_width="30dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/orange_4"></View>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_zsz"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="15dp">
+
+            <TextView
+                android:id="@+id/tv_zsz"
+                android:textColor="@color/black_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="在售中"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/view_zsz"
+                android:layout_width="30dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/orange_4"></View>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_ysq"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="15dp">
+
+            <TextView
+                android:id="@+id/tv_ysq"
+                android:textColor="@color/black_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已售罄"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/view_ysq"
+                android:layout_width="30dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/orange_4"></View>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_yxj"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="15dp">
+
+            <TextView
+                android:id="@+id/tv_yxj"
+                android:textColor="@color/black_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已下架"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/view_yxj"
+                android:layout_width="30dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/orange_4"></View>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.handmark.pulltorefresh.library.PullToRefreshRecyclerView
+            android:layout_marginTop="10dp"
+            android:id="@+id/plrv_gl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/home_lable_container"
+            android:gravity="fill"
+            ptr:ptrMode="both"
+            />
+        <com.rch.custom.LoadingView
+            android:id="@+id/ld_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+
+
+
+
+
+
+</LinearLayout>
